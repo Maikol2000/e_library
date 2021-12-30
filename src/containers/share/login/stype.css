@@ -1,0 +1,98 @@
+div {
+  width: 100%;
+  height: 100vh;
+}
+
+.login__bg {
+  position: relative;
+  background: url(../../../assets/img/login.png) no-repeat;
+  background-size: 100% 100vh;
+}
+
+.login__bg img {
+  position: absolute;
+  width: 10%;
+  right: 0;
+  top: 0%;
+}
+
+.login__bg .form__login {
+  position: absolute;
+  left: 65%;
+  top: 22%;
+  bottom: 70%;
+  width: 25%;
+  height: 0;
+}
+
+.login__bg .form__login h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 60px;
+  letter-spacing: 0.015em;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--Orange-7);
+}
+
+.login__bg .form__login .form-group {
+  height: 100%;
+}
+
+.login__bg .form__login .form-group section {
+  position: relative;
+}
+
+.login__bg .form__login .form-group .icon2 {
+  position: absolute;
+  width: 20px;
+  left: 11px;
+  top: 7px;
+}
+
+.login__bg .form__login .form-group .icon1 {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  left: 11px;
+  top: 9px;
+  color: #dedcda;
+}
+
+.login__bg .form__login .form-group label {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+}
+
+.login__bg .form__login .form-group input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px 8px 32px;
+  background: #f2f2f2;
+  border-radius: 8px;
+}
+
+.login__bg .form__login p {
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  line-height: 130%;
+
+  text-align: right;
+  color: #ff7506;
+}
+
+.login__bg .form__login button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Gradient */
+
+  background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  height: 52px;
+}
