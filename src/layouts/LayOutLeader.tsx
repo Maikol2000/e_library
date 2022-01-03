@@ -6,13 +6,13 @@ export default function LayOutLeader() {
   // const isLoggin = Boolean(localStorage.getItem("access_token"))
   // if (!isLoggin) return <Redirect to="/login" />
   return (
-    <div className="row">
-      <div className="col-1">
+    <div className="row" style={{flexWrap:"nowrap"}}>
+      <section className="col-1" style={{marginRight:"5rem"}}>
         <NavBarNavBarForLeader />
-      </div>
-      <div className="col-11">
+      </section>
+      <section className="col-10" style={{paddingTop:"3rem"}}>
         <LeaderCompoennt />
-      </div>
+      </section>
     </div>
   );
 }

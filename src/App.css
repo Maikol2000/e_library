@@ -1,5 +1,8 @@
 :root {
   --Orange-7: #373839;
+  --Orange-5: #cc5c00;
+  --Orange-4: #ff7506;
+  --Orange-3: #ffa75e;
 }
 
 * {
@@ -16,4 +19,8 @@ html {
 
 li {
   list-style: none;
+}
+
+a:hover {
+  text-decoration: none !important;
 }

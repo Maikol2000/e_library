@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 //component
-import Home from "./Home/Home";
+import HomeLeader from "./homeLeader/HomeLeader";
 import DanhSachMon from "./quanLyMon/danhSachMon/DanhSachMon";
 import TroGiup from "./troGiup/TroGiup";
 import CaiDatHeThong from "../../components/leaderComponent/caiDatHeThong/CaiDatHeThong";
@@ -16,7 +16,7 @@ export default function LeaderCompoennt() {
   return (
       <div className="content">
         <Switch>
-          <Route exact path="/page-leader">{Home}</Route>
+          <Route exact path="/page-leader">{HomeLeader}</Route>
           <Route path="/page-leader/danh-sach-mon">{DanhSachMon}</Route>
           <Route path="/page-leader/phe-duyet-tai-lieu">
             {PhepDuyetTaiLieu}
