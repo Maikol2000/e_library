@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function DanhSachMon() {
+export default function DanhSachMon(props:any) {
     return (
         <div>
-            DanhSachMon
+            <p className=''>lala`</p>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 //component
-import HomeLeader from "./homeLeader/HomeLeader";
+import { HomeLeader } from "./homeLeader/HomeLeader";
 import DanhSachMon from "./quanLyMon/danhSachMon/DanhSachMon";
 import TroGiup from "./troGiup/TroGiup";
 import CaiDatHeThong from "../../components/leaderComponent/caiDatHeThong/CaiDatHeThong";
@@ -11,22 +11,20 @@ import PhepDuyetTaiLieu from "../../components/leaderComponent/quanLyMon/phepDuy
 import TepRiengTu from "../../components/leaderComponent/tepRiengTu/TepRiengTu";
 import ThongBao from "../../components/leaderComponent/thongBao/ThongBao";
 
-
 export default function LeaderCompoennt() {
+
   return (
-      <div className="content">
-        <Switch>
-          <Route exact path="/page-leader">{HomeLeader}</Route>
-          <Route path="/page-leader/danh-sach-mon">{DanhSachMon}</Route>
-          <Route path="/page-leader/phe-duyet-tai-lieu">
-            {PhepDuyetTaiLieu}
-          </Route>
-          <Route path="/page-leader/tep-rieng-tu">{TepRiengTu}</Route>
-          <Route path="/page-leader/ngan-hang-de-thi">{NganHangDeThi}</Route>
-          <Route path="/page-leader/thong-bao">{ThongBao}</Route>
-          <Route path="/page-leader/cai-dat-he-thong">{CaiDatHeThong}</Route>
-          <Route path="/page-leader/tro-giup">{TroGiup}</Route>
-        </Switch>
-      </div>
+    <div className="content">
+      <Switch>
+        <Route exact path="/page-leader/Trang Chủ" component={HomeLeader}/>
+        <Route path="/page-leader/Danh sách môn học" component={DanhSachMon} />
+        <Route path="/page-leader/Phê duyệt tài liệu" component={PhepDuyetTaiLieu}/>
+        <Route path="/page-leader/Tệp riêng tư" component={TepRiengTu}/>
+        <Route path="/page-leader/Ngân hàng đề thi" component={NganHangDeThi}/>
+        <Route path="/page-leader/Thông báo" component={ThongBao}/>
+        <Route path="/page-leader/Cài đặt hệ thống" component={CaiDatHeThong}/>
+        <Route path="/page-leader/Trợ giúp" component={TroGiup}/>
+      </Switch>
+    </div>
   );
 }

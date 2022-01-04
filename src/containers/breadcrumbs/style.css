@@ -1,0 +1,18 @@
+.css-ahj2mt-MuiTypography-root {
+  font-size: 30px !important;
+  letter-spacing: 0.015em !important;
+  color: var(--Orange-7) !important;
+  font-weight: 700 !important;
+}
+
+.css-1iwtne7-MuiTypography-root-MuiLink-root {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: #c9c4c0 !important;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 24px;
+  text-decoration: none !important;
+}

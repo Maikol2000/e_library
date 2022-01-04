@@ -31,43 +31,46 @@ export default function NavBarNavBarForLeader(props: LeaderProps) {
           role="tablist"
         >
           <li>
-            <NavLink exact to="/page-leader" activeClassName="active">
+            <NavLink exact to="/page-leader/Trang Chủ" activeClassName="active">
               <img src={home} alt="..." />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/page-leader/danh-sach-mon" activeClassName="active">
+            <NavLink
+              to="/page-leader/Danh sách môn học"
+              activeClassName="active"
+            >
               <img src={book} alt="..." />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/page-leader/tep-rieng-tu" activeClassName="active">
+            <NavLink to="/page-leader/Tệp riêng tư" activeClassName="active">
               <img src={lock} alt="..." />
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/page-leader/ngan-hang-de-thi"
+              to="/page-leader/Ngân hàng đề thi"
               activeClassName="active"
             >
               <img src={bag} alt="..." />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/page-leader/thong-bao" activeClassName="active">
+            <NavLink to="/page-leader/Thông báo" activeClassName="active">
               <img src={bell} alt="..." />
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/page-leader/cai-dat-he-thong"
+              to="/page-leader/Cài đặt hệ thống"
               activeClassName="active"
             >
               <img src={setting} alt="..." />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/page-leader/tro-giup" activeClassName="active">
+            <NavLink to="/page-leader/Trợ giúp" activeClassName="active">
               <img src={quession} alt="..." />
             </NavLink>
           </li>
@@ -75,54 +78,52 @@ export default function NavBarNavBarForLeader(props: LeaderProps) {
         <div className="menu">
           <ul className="menu__item">
             <li className="home__nav">
-              <NavLink exact to="/page-leader" activeClassName="active">
+              <NavLink exact to="/page-leader/Trang Chủ" activeClassName="active">
                 Trang chủ
               </NavLink>
             </li>
             <li className="khoa__hoc__nav">
               <span onClick={drop}>Quản lý khóa học</span>
-              <section
-                id={dropMenu ? "menu_drop_true" : "menu_drop_false"}
-              >
+              <section id={dropMenu ? "menu_drop_true" : "menu_drop_false"}>
                 <NavLink
-                  to="/page-leader/danh-sach-mon"
+                  to="/page-leader/Danh sách môn học"
                   activeClassName="active"
                 >
                   Danh sách môn học
                 </NavLink>
-                <NavLink to="/page-leader/phe-duyet-tai-lieu">
+                <NavLink to="/page-leader/Phê duyệt tài liệu">
                   Phê duyệt tài liệu môn học
                 </NavLink>
               </section>
             </li>
             <li className="lock__nav">
-              <NavLink to="/page-leader/tep-rieng-tu" activeClassName="active">
+              <NavLink to="/page-leader/Tệp riêng tư" activeClassName="active">
                 Tệp riêng tư
               </NavLink>
             </li>
             <li className="bag__nav">
               <NavLink
-                to="/page-leader/ngan-hang-de-thi"
+                to="/page-leader/Ngân hàng đề thi"
                 activeClassName="active"
               >
                 Ngân hàng đề thi
               </NavLink>
             </li>
             <li className="bell__nav">
-              <NavLink to="/page-leader/thong-bao" activeClassName="active">
+              <NavLink to="/page-leader/Thông báo" activeClassName="active">
                 Thông báo
               </NavLink>
             </li>
             <li className="set__nav">
               <NavLink
-                to="/page-leader/cai-dat-he-thong"
+                to="/page-leader/Cài đặt hệ thống"
                 activeClassName="active"
               >
                 Cài đặt hệ thống
               </NavLink>
             </li>
             <li className="ques__nav">
-              <NavLink to="/page-leader/tro-giup" activeClassName="active">
+              <NavLink to="/page-leader/Trợ giúp" activeClassName="active">
                 Trợ giúp
               </NavLink>
             </li>

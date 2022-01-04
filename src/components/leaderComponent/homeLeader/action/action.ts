@@ -1,5 +1,5 @@
 //firebase
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, getDocs, onSnapshot } from "firebase/firestore";
 import db from "../../../../settings/configFirebase/config";
 
 import { DANH_SACH_HIS_DOC_VIDEO } from "./type";
@@ -9,15 +9,19 @@ const actDanhSachLíchuDocVideoSuccess = (doc: any) => ({
   payload: doc,
 });
 
-export const actDanhSachLíchuDocVideo = () => {
+export const actDanhSachLichSuDocVideo = () => {
   return (dispatch: any) => {
-    try {
-      onSnapshot(collection(db, "docVideo"), (items) => {
-        const arr = items.docs.map((r) => r.data());
+    const colRef = collection(db, "docVideo");
+    getDocs(colRef)
+      .then((res) => {
+        let arr: { [x: string]: any }[] = [];
+        res.docs.forEach((doc) => {
+          arr.push({ ...doc.data() });
+        });
         dispatch(actDanhSachLíchuDocVideoSuccess(arr));
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    } catch (error) {
-      console.log(error);
-    }
   };
 };

@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.css";
 
-//carousel
-import Slider from "react-slick";
+//Paginate
+import ReactPaginate from "react-paginate";
 
 //img
 import arrow from "../../../assets/img/arrow.png";
 import { useDispatch, useSelector } from "react-redux";
-import { actDanhSachLíchuDocVideo } from "./action/action";
-//font awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { actDanhSachLichSuDocVideo } from "./action/action";
+import play_Circle from "../../../assets/img/play_Circle.png";
+import file_1 from "../../../assets/img/file-1.png";
+import file_2 from "../../../assets/img/file-2.png";
+import file_3 from "../../../assets/img/file-3.png";
+import file_4 from "../../../assets/img/file-4.png";
+
+import { RootState } from "../../../store/store";
 
 // setting slick
 const settings = {
@@ -27,26 +31,30 @@ interface T {
   nameId: string;
 }
 
-export default function HomeLeader() {
-  // var dispatch = useDispatch();
-  // dispatch(actDanhSachLíchuDocVideo());
+export const HomeLeader = () => {
+  const dispatch = useDispatch();
 
-  // const [state, setstate] = useState<object[]>([])
+  useEffect(() => {
+    dispatch(actDanhSachLichSuDocVideo());
+  }, []);
 
-  //lấy Tài liệu môn học đã xem gần đây
-  // const danhSachLichSuTaiLieu = useSelector(
-  //   (state: { danhSachLichSuVideoReducer: { danhSachLichSuTaiLieu: any } }) =>
-  //     state.danhSachLichSuVideoReducer.danhSachLichSuTaiLieu
-  // );
+  const danhSachLichSuTaiLieu = useSelector(
+    (state: RootState) => state.danhSachLichSuVideoReducer.danhSachLichSuTaiLieu
+  );
 
-  //paginate
-  // const perpage = 8 / 10;
-  // const pages = Math.ceil(danhSachLichSuTaiLieu.length / perpage);
-  // const paginate = [];
+  //paginate cho danh sách người dùng chờ xác nhận vào khóa học
+  const [pageNumber, setPageNumber] = useState(0);
+  const docsPerPage = 8;
+  const pagesVisited = pageNumber * docsPerPage;
+
+  const pageCount = Math.ceil(danhSachLichSuTaiLieu.length / docsPerPage);
+
+  const changePage = ({ selected }: any) => {
+    setPageNumber(selected);
+  };
 
   return (
     <>
-      <p className="home_leader_main_text">Trang Chủ</p>
       <section className="home_leader">
         <section className="home_leader_line_1">
           <section className="home_leader_line_1_left">
@@ -96,135 +104,48 @@ export default function HomeLeader() {
             Tài liệu môn học đã xem gần đây
           </p>
           <section className="tab_home_main">
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
-            <section className="tab_home">
-              <section className="cont">
-                <img
-                  src="https://picsum.photos/200"
-                  alt="..."
-                  className="tab_home_img"
-                />
-                <section className="tab_home_content">
-                  <span className="tab_text_1">Phat</span>
-                  <span className="tab_text_2">web</span>
-                  <span className="tab_text_3">web</span>
-                  <span className="tab_text_4">giang vien: Hoa hoa</span>
-                </section>
-              </section>
-            </section>
+            {danhSachLichSuTaiLieu
+              .slice(pagesVisited, pagesVisited + docsPerPage)
+              .map((docs: any) => {
+                const { giangVien, name, nameId, moTa } = docs;
+                return (
+                  <section className="tab_home">
+                    <section className="cont">
+                      <img
+                        src="https://picsum.photos/200"
+                        alt="..."
+                        className="tab_home_img"
+                      />
+                      <img
+                        src={play_Circle}
+                        alt="..."
+                        className="play_Circle"
+                      />
+                      <section className="tab_home_content">
+                        <span className="tab_text_1">{name}</span>
+                        <span className="tab_text_2">{moTa}</span>
+                        <span className="tab_text_3">{nameId}</span>
+                        <span className="tab_text_4">
+                          giang vien: {giangVien}
+                        </span>
+                      </section>
+                    </section>
+                  </section>
+                );
+              })}
           </section>
-          <div className="home_line_2_arow">
-            <section className="home_line_2_arow_1 arrow_disappear">
-              <FontAwesomeIcon icon={faAngleLeft} />
-            </section>
-            <section className="home_line_2_arow_2">
-              <FontAwesomeIcon icon={faAngleRight} />
-            </section>
-          </div>
+
+          <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginateBttn"}
+            previousLinkClassName={"previousBttn"}
+            nextLinkClassName={"nextBttn"}
+            disabledClassName={"disablePaginate"}
+            activeClassName={"activePaginate"}
+          />
         </div>
         <section className="home_leader_line_3">
           <section className="home_table_line_3">
@@ -252,20 +173,49 @@ export default function HomeLeader() {
           </section>
           <section className="home_leader_file_private">
             <p>Tệp riêng tư tải lên gần đây</p>
-            <section className="home_leader_file_private_show">
-              <section className="file_private">
-                <img src="" alt="..." />
-                <section className="file_private_content">
-                  <span>Thương mại điện tử là.docx</span>
-                  <span>12:01 12/12/2021</span>
-                  <span>Thương mại điện tử</span>
-                  <span>Giảng viên: Hoa Hoa</span>
+            <div className="home_leader_file_private_tab">
+              <section className="home_leader_file_private_show">
+                <section className="file_private">
+                  <img src={file_1} alt="..." />
+                  <section className="file_private_content">
+                    <span>Thương mại điện tử là.docx</span>
+                    <span>12:01 12/12/2021</span>
+                    <span>Thương mại điện tử</span>
+                    <span>Giảng viên: Hoa Hoa</span>
+                  </section>
                 </section>
               </section>
+              <section className="home_leader_file_private_show">
+                <section className="file_private">
+                  <img src={file_2} alt="..." />
+                  <section className="file_private_content">
+                    <span>Lịch sử mỹ thuật.docx</span>
+                    <span>12:01 12/12/2021</span>
+                    <span>Lịch sử mỹ thuật</span>
+                    <span>Giảng viên: Ms. Yến</span>
+                  </section>
+                </section>
+              </section>
+              <section className="home_leader_file_private_show">
+                <section className="file_private">
+                  <img src={file_3} alt="..." />
+                  <section className="file_private_content">
+                    <span>Danh sách ông tập.docx</span>
+                    <span>12:01 10/11/2021</span>
+                    <span>Ngữ Văn</span>
+                    <span>Giảng viên: Lê Hoa</span>
+                  </section>
+                </section>
+              </section>
+            </div>
+            <p>Hiển thị 10 tệp tài liệu đã xem gần đây nhất</p>
+            <section className="arrow_home_leader_line_3">
+              <span> {"<"} </span>
+              <span>{">"}</span>
             </section>
           </section>
         </section>
       </section>
     </>
   );
-}
+};
