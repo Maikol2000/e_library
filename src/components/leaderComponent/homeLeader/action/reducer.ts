@@ -1,16 +1,19 @@
-import { DANH_SACH_HIS_DOC_VIDEO } from "./type";
+import { DANH_SACH_HIS_DOC_VIDEO, DANH_SACH_TEP_RIENG_TU } from "./type";
 
 const initialState = {
-  danhSachLichSuTaiLieu: [],
+  danhSachLichXuTaiLieu: [],
+  danhSachTepRiengTuDaTaiLenGanDay: [],
 };
 
-export const danhSachLichSuVideoReducer = (
+export const homeLeaderReducer = (
   state = initialState,
   { type, payload }: any
 ) => {
   switch (type) {
     case DANH_SACH_HIS_DOC_VIDEO:
-      return { ...state, danhSachLichSuTaiLieu: payload };
+      return { ...state, danhSachLichXuTaiLieu: payload };
+    case DANH_SACH_TEP_RIENG_TU:
+      return { ...state, danhSachTepRiengTuDaTaiLenGanDay: payload };
 
     default:
       return state;

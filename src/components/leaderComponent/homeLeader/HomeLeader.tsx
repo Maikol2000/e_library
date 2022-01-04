@@ -7,7 +7,10 @@ import ReactPaginate from "react-paginate";
 //img
 import arrow from "../../../assets/img/arrow.png";
 import { useDispatch, useSelector } from "react-redux";
-import { actDanhSachLichSuDocVideo } from "./action/action";
+import {
+  actDanhSachLichSuDocVideo,
+  actDanhSachTepriengTu,
+} from "./action/action";
 import play_Circle from "../../../assets/img/play_Circle.png";
 import file_1 from "../../../assets/img/file-1.png";
 import file_2 from "../../../assets/img/file-2.png";
@@ -36,23 +39,38 @@ export const HomeLeader = () => {
 
   useEffect(() => {
     dispatch(actDanhSachLichSuDocVideo());
+    dispatch(actDanhSachTepriengTu());
   }, []);
 
   const danhSachLichSuTaiLieu = useSelector(
-    (state: RootState) => state.danhSachLichSuVideoReducer.danhSachLichSuTaiLieu
+    (state: RootState) => state.homeLeaderReducer.danhSachLichXuTaiLieu
   );
 
-  //paginate cho danh sách người dùng chờ xác nhận vào khóa học
+  const danhSachTepRiengTuDaTaiLenGanDay = useSelector(
+    (state: RootState) =>
+      state.homeLeaderReducer.danhSachTepRiengTuDaTaiLenGanDay
+  );
+
+  //paginate cho danh sách tài liệu liệu môn học xem gần đây
   const [pageNumber, setPageNumber] = useState(0);
   const docsPerPage = 8;
   const pagesVisited = pageNumber * docsPerPage;
-
   const pageCount = Math.ceil(danhSachLichSuTaiLieu.length / docsPerPage);
+
+  //paginate cho danh sách Tệp riêng tư tải lên gần đây
+  const [pageNumberTwo, setPageNumberTwo] = useState(0);
+  const docsPerPageTwo = 3;
+  const pagesVisitedTwo = pageNumberTwo * docsPerPageTwo;
+  const pageCountTwo = Math.ceil(
+    danhSachTepRiengTuDaTaiLenGanDay.length / docsPerPageTwo
+  );
 
   const changePage = ({ selected }: any) => {
     setPageNumber(selected);
   };
-
+  const changePageTwo = ({ selected }: any) => {
+    setPageNumberTwo(selected);
+  };
   return (
     <>
       <section className="home_leader">
@@ -106,10 +124,10 @@ export const HomeLeader = () => {
           <section className="tab_home_main">
             {danhSachLichSuTaiLieu
               .slice(pagesVisited, pagesVisited + docsPerPage)
-              .map((docs: any) => {
+              .map((docs: any, index: number) => {
                 const { giangVien, name, nameId, moTa } = docs;
                 return (
-                  <section className="tab_home">
+                  <section key={index} className="tab_home">
                     <section className="cont">
                       <img
                         src="https://picsum.photos/200"
@@ -174,45 +192,40 @@ export const HomeLeader = () => {
           <section className="home_leader_file_private">
             <p>Tệp riêng tư tải lên gần đây</p>
             <div className="home_leader_file_private_tab">
-              <section className="home_leader_file_private_show">
-                <section className="file_private">
-                  <img src={file_1} alt="..." />
-                  <section className="file_private_content">
-                    <span>Thương mại điện tử là.docx</span>
-                    <span>12:01 12/12/2021</span>
-                    <span>Thương mại điện tử</span>
-                    <span>Giảng viên: Hoa Hoa</span>
-                  </section>
-                </section>
-              </section>
-              <section className="home_leader_file_private_show">
-                <section className="file_private">
-                  <img src={file_2} alt="..." />
-                  <section className="file_private_content">
-                    <span>Lịch sử mỹ thuật.docx</span>
-                    <span>12:01 12/12/2021</span>
-                    <span>Lịch sử mỹ thuật</span>
-                    <span>Giảng viên: Ms. Yến</span>
-                  </section>
-                </section>
-              </section>
-              <section className="home_leader_file_private_show">
-                <section className="file_private">
-                  <img src={file_3} alt="..." />
-                  <section className="file_private_content">
-                    <span>Danh sách ông tập.docx</span>
-                    <span>12:01 10/11/2021</span>
-                    <span>Ngữ Văn</span>
-                    <span>Giảng viên: Lê Hoa</span>
-                  </section>
-                </section>
-              </section>
+              {danhSachTepRiengTuDaTaiLenGanDay
+                .slice(pagesVisitedTwo, pagesVisitedTwo + docsPerPageTwo)
+                .map((doc: any, index: any) => {
+                  const { giangVien, ngayGui, tenMonHoc, nameFile } = doc;
+                  return (
+                    <section
+                      key={index}
+                      className="home_leader_file_private_show"
+                    >
+                      <section className="file_private">
+                        <img src={file_1} alt="..." />
+                        <section className="file_private_content">
+                          <span>{nameFile}</span>
+                          <span>{ngayGui}</span>
+                          <span>{tenMonHoc}</span>
+                          <span>Giảng viên: {giangVien}</span>
+                        </section>
+                      </section>
+                    </section>
+                  );
+                })}
             </div>
             <p>Hiển thị 10 tệp tài liệu đã xem gần đây nhất</p>
-            <section className="arrow_home_leader_line_3">
-              <span> {"<"} </span>
-              <span>{">"}</span>
-            </section>
+            <ReactPaginate
+              previousLabel={"Previous"}
+              nextLabel={"Next"}
+              pageCount={pageCountTwo}
+              onPageChange={changePageTwo}
+              containerClassName={"paginateBttn"}
+              previousLinkClassName={"previousBttn"}
+              nextLinkClassName={"nextBttn"}
+              disabledClassName={"disablePaginate"}
+              activeClassName={"activePaginate"}
+            />
           </section>
         </section>
       </section>
