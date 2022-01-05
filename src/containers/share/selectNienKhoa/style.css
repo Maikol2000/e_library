@@ -1,0 +1,35 @@
+.nien_khoa {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.custom_seclect {
+  display: flex;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.custom_seclect .arrow {
+  border: solid 1px var(--Orange-7);
+  position: absolute;
+  height: 26px;
+  left: 183px;
+  line-height: 23px;
+  width: 30px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+#form-control {
+  padding: 5px;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 120px;
+  height: 26px;
+  line-height: 14px;
+  z-index: 5;
+  position: relative;
+  background: #ffffff00;
+}

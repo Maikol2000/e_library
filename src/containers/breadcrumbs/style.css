@@ -16,3 +16,12 @@
   margin: 0px 24px;
   text-decoration: none !important;
 }
+
+.css-1wuw8dw-MuiBreadcrumbs-separator {
+  color: #ffffff00;
+  background: url(../../assets/img/chevron_big_right.png)
+    no-repeat;
+  width: 32px;
+  background-size: 30px;
+  background-position: center;
+}

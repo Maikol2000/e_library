@@ -17,8 +17,8 @@ export default function LeaderCompoennt() {
     <div className="content">
       <Switch>
         <Route exact path="/page-leader/Trang Chủ" component={HomeLeader}/>
-        <Route path="/page-leader/Danh sách môn học" component={DanhSachMon} />
-        <Route path="/page-leader/Phê duyệt tài liệu" component={PhepDuyetTaiLieu}/>
+        <Route path="/page-leader/Quảng lý học viên/Danh sách môn học" component={DanhSachMon} />
+        <Route path="/page-leader/Quảng lý học viên/Phê duyệt tài liệu môn học" component={PhepDuyetTaiLieu}/>
         <Route path="/page-leader/Tệp riêng tư" component={TepRiengTu}/>
         <Route path="/page-leader/Ngân hàng đề thi" component={NganHangDeThi}/>
         <Route path="/page-leader/Thông báo" component={ThongBao}/>

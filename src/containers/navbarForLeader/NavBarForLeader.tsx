@@ -37,7 +37,7 @@ export default function NavBarNavBarForLeader(props: LeaderProps) {
           </li>
           <li>
             <NavLink
-              to="/page-leader/Danh sách môn học"
+              to="/page-leader/Quảng lý học viên/Danh sách môn học"
               activeClassName="active"
             >
               <img src={book} alt="..." />
@@ -86,12 +86,12 @@ export default function NavBarNavBarForLeader(props: LeaderProps) {
               <span onClick={drop}>Quản lý khóa học</span>
               <section id={dropMenu ? "menu_drop_true" : "menu_drop_false"}>
                 <NavLink
-                  to="/page-leader/Danh sách môn học"
+                  to="/page-leader/Quảng lý học viên/Danh sách môn học"
                   activeClassName="active"
                 >
                   Danh sách môn học
                 </NavLink>
-                <NavLink to="/page-leader/Phê duyệt tài liệu">
+                <NavLink to="/page-leader/Quảng lý học viên/Phê duyệt tài liệu môn học" >
                   Phê duyệt tài liệu môn học
                 </NavLink>
               </section>

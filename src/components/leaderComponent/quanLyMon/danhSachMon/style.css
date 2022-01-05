@@ -1,0 +1,161 @@
+.danh_sach_mon_leader {
+  width: 100%;
+  height: 80%;
+  background: #ffffff;
+  box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+  border-radius: 16px;
+  padding: 3.5rem;
+}
+
+.danh_sach_mon_leader_custom_selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.danh_sach_mon_list_tab {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+
+.danh_sach_mon_nien_khoa {
+  margin: 3rem 0;
+}
+/* custom select môn học */
+.danh_sach_mon_custom_seclect {
+  position: relative;
+  display: flex;
+  height: 35px;
+}
+
+.danh_sach_mon_custom_sel {
+  width: 183px;
+  border: 1px solid #373839;
+  background: #ffffff00;
+  border-radius: 4px;
+  appearance: none;
+  padding-left: 10px;
+  z-index: 5;
+  line-height: 23px;
+}
+
+.danh_sach_mon_arrow {
+  position: absolute;
+  border: solid 1px var(--Orange-7);
+  right: 0;
+  width: 15%;
+  height: 100%;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+}
+/* end custom select môn học */
+
+/* custom input */
+.danh_sach_mon_custom_input {
+  position: relative;
+  width: 30%;
+}
+
+.danh_sach_mon_custom_input input {
+  width: 100%;
+  height: 40px;
+  background: #f0f3f6;
+  border-radius: 24px;
+  border: none;
+  padding-left: 35px;
+}
+
+.danh_sach_mon_custom_input img {
+  position: absolute;
+  left: 5px;
+  top: 9px;
+}
+/* end custom input */
+
+/* custom table */
+.danh_sach_mon_list_subject {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 92%;
+}
+
+.css-1q1u3t4-MuiTableRow-root {
+  background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
+}
+
+.MuiTableRow-root th {
+  text-align: left;
+}
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+  height: 62.03%;
+}
+/* end custom table */
+
+.danh_sach_mon_line_end {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* custom input */
+.danh_sach_mon_custom_input_line_end {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--Orange-7);
+}
+
+.danh_sach_mon_custom_input_line_end input {
+  width: 10%;
+  border: solid 1px var(--Orange-4);
+  border-radius: 4px;
+  padding-left: 5px;
+}
+/* end custom input */
+
+/*custom paginate*/
+.paginateBttnDSM {
+  display: flex;
+  justify-content: flex-end;
+}
+.paginateBttnDSM li {
+  margin-right: 2rem;
+}
+.paginateBttnDSM li:first-child,
+.paginateBttnDSM li:last-child {
+  width: 1%;
+}
+.paginateBttnDSM li:first-child a,
+.paginateBttnDSM li:last-child a {
+  color: #ffffff;
+}
+.paginateBttnDSM li:first-child a::before {
+  content: "<";
+  color: #373839;
+}
+
+.paginateBttnDSM li:last-child a::before {
+  content: ">";
+  color: #373839;
+}
+
+.activePaginateDSM {
+  width: 26px;
+  height: 26px;
+  background: var(--Orange-4);
+  border-radius: 50%;
+  color: var(--Orange-1);
+  text-align: center;
+}
+/*end custom paginate*/
+.daPheDuyet {
+  color: #49c510;
+}
+.choPheDuyet {
+  color: #7c7c7c;
+}

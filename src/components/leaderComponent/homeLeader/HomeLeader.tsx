@@ -5,7 +5,6 @@ import "./style.css";
 import ReactPaginate from "react-paginate";
 
 //img
-import arrow from "../../../assets/img/arrow.png";
 import { useDispatch, useSelector } from "react-redux";
 import {
   actDanhSachLichSuDocVideo,
@@ -13,11 +12,9 @@ import {
 } from "./action/action";
 import play_Circle from "../../../assets/img/play_Circle.png";
 import file_1 from "../../../assets/img/file-1.png";
-import file_2 from "../../../assets/img/file-2.png";
-import file_3 from "../../../assets/img/file-3.png";
-import file_4 from "../../../assets/img/file-4.png";
 
 import { RootState } from "../../../store/store";
+import SelectNienKhoa from "../../../containers/share/selectNienKhoa/SelectNienKhoa";
 
 // setting slick
 const settings = {
@@ -75,19 +72,7 @@ export const HomeLeader = () => {
     <>
       <section className="home_leader">
         <section className="home_leader_line_1">
-          <section className="home_leader_line_1_left">
-            <span style={{ width: "73px" }}>Niên khóa</span>
-            <span className="custom_seclect_leader_home">
-              <select id="form-control">
-                <option selected>2020-2021</option>
-                <option>2015-2016</option>
-                <option>2018-2019</option>
-              </select>
-              <section className="arrow">
-                <img src={arrow} alt="..." />
-              </section>
-            </span>
-          </section>
+          <SelectNienKhoa />
           <section className="home_leader_line_1_right">
             <section className="mon__hoc common_line_1_right">
               <p className="line_1_right_text_1">12</p>
