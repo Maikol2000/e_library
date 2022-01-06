@@ -25,9 +25,17 @@ import { actDanhSachTepriengTu } from "../../homeLeader/action/action";
 import { RootState } from "../../../../store/store";
 //Paginate
 import ReactPaginate from "react-paginate";
+import { useHistory } from "react-router-dom";
+//font awesome
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight
+} from "@fortawesome/free-solid-svg-icons";
 
-export default function DanhSachMon(props: any) {
+export default function DanhSachMon() {
   const dispatch = useDispatch();
+  const history = useHistory();
   useEffect(() => {
     dispatch(actDanhSachTepriengTu());
   }, []);
@@ -146,7 +154,11 @@ export default function DanhSachMon(props: any) {
             </section>
           </section>
           <section className="danh_sach_mon_custom_input">
-            <input onChange={onSearch} type="text" />
+            <input
+              placeholder="tìm tên giảng viên"
+              onChange={onSearch}
+              type="text"
+            />
             <img src={fi_search} alt="..." />
           </section>
         </section>
@@ -198,7 +210,17 @@ export default function DanhSachMon(props: any) {
                           <StyledTableCell component="th" scope="row">
                             {maMonHoc}
                           </StyledTableCell>
-                          <StyledTableCell component="th" scope="row">
+                          <StyledTableCell
+                            style={{ cursor: "pointer" }}
+                            component="th"
+                            scope="row"
+                            onClick={() =>
+                              history.push({
+                                pathname: `/page-leader/Quảng lý học viên/${tenMonHoc}`,
+                                state: row,
+                              })
+                            }
+                          >
                             {tenMonHoc}
                           </StyledTableCell>
                           <StyledTableCell component="th" scope="row">

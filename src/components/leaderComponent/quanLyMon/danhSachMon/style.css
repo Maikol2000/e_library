@@ -27,6 +27,8 @@
   position: relative;
   display: flex;
   height: 35px;
+  width: 90%;
+  font-size: 14px;
 }
 
 .danh_sach_mon_custom_sel {

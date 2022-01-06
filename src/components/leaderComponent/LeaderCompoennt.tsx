@@ -10,20 +10,33 @@ import NganHangDeThi from "../../components/leaderComponent/nganHangDeThi/NganHa
 import PhepDuyetTaiLieu from "../../components/leaderComponent/quanLyMon/phepDuyetTaiLieu/PhepDuyetTaiLieu";
 import TepRiengTu from "../../components/leaderComponent/tepRiengTu/TepRiengTu";
 import ThongBao from "../../components/leaderComponent/thongBao/ThongBao";
+import MonHocDetail from "./quanLyMon/danhSachMon/monHocDetail/monHocDetail";
+import XemMonHoc from "./quanLyMon/danhSachMon/xemMonHoc/XemMonHoc";
 
 export default function LeaderCompoennt() {
-
   return (
     <div className="content">
       <Switch>
-        <Route exact path="/page-leader/Trang Chủ" component={HomeLeader}/>
-        <Route path="/page-leader/Quảng lý học viên/Danh sách môn học" component={DanhSachMon} />
-        <Route path="/page-leader/Quảng lý học viên/Phê duyệt tài liệu môn học" component={PhepDuyetTaiLieu}/>
-        <Route path="/page-leader/Tệp riêng tư" component={TepRiengTu}/>
-        <Route path="/page-leader/Ngân hàng đề thi" component={NganHangDeThi}/>
-        <Route path="/page-leader/Thông báo" component={ThongBao}/>
-        <Route path="/page-leader/Cài đặt hệ thống" component={CaiDatHeThong}/>
-        <Route path="/page-leader/Trợ giúp" component={TroGiup}/>
+        <Route exact path="/page-leader/Trang Chủ" component={HomeLeader} />
+        <Route
+          path="/page-leader/Quảng lý học viên/Danh sách môn học"
+          component={DanhSachMon}
+        />
+        <Route path="/page-leader/Danh sách môn học/:id" component={XemMonHoc} />
+        <Route
+          exact
+          path="/page-leader/Quảng lý học viên/Phê duyệt tài liệu môn học"
+          component={PhepDuyetTaiLieu}
+        />
+        <Route
+          path="/page-leader/Quảng lý học viên/:id"
+          component={MonHocDetail}
+        />
+        <Route path="/page-leader/Tệp riêng tư" component={TepRiengTu} />
+        <Route path="/page-leader/Ngân hàng đề thi" component={NganHangDeThi} />
+        <Route path="/page-leader/Thông báo" component={ThongBao} />
+        <Route path="/page-leader/Cài đặt hệ thống" component={CaiDatHeThong} />
+        <Route path="/page-leader/Trợ giúp" component={TroGiup} />
       </Switch>
     </div>
   );

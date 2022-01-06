@@ -1,0 +1,214 @@
+.tongQuanDanhSachDT {
+  width: 100%;
+  height: 211px;
+  background: #fff9f4;
+  border: 1px solid var(--Orange-4);
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  margin: 3rem 0;
+}
+
+.tongQuanDanhSachDTTextMain {
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-5);
+  font-weight: 700;
+}
+
+.thongTinDoc {
+  display: flex;
+}
+.thongTinDocMot {
+  display: flex;
+  width: 25%;
+  border-right: 1px solid #c9c4c0;
+}
+
+.thongTinDocsMottext {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+  margin-right: 1rem;
+}
+
+.thongTinDocHai {
+  display: flex;
+  width: 75%;
+  padding-left: 5rem;
+}
+
+.thongTinDocMot section,
+.thongTinDocHai section {
+  font-size: 16px;
+  color: var(--Orange-7);
+  opacity: 0.8;
+}
+
+.danhSachChuDe p {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-5);
+}
+
+/*custom accordion*/
+.accordion > .card {
+  background: #ffffff !important;
+  box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+  border-radius: 8px;
+}
+
+.custom_header_accordion {
+  display: flex;
+  align-items: center;
+}
+
+.custom_link_accordion {
+  display: contents;
+}
+
+.custom_img_chevron_big_right {
+  cursor: pointer;
+  transform: rotate(90deg);
+  transition: all 0.2s;
+  font-size: 30px;
+  color: #ffffff;
+}
+.collapsed .custom_img_chevron_big_right {
+  transform: rotate(0deg);
+  transition: all 0.2s;
+  font-size: 30px;
+  color: var(--Orange-4);
+}
+
+.danhSachChuDeTextMain {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+  margin-left: 2rem;
+}
+
+.accordion > .card {
+  margin-bottom: 1rem;
+}
+
+.card .card_custom_bg_accordion {
+  transition: all 0.2s;
+  background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
+}
+
+.card_custom_bg_accordion .danhSachChuDeTextMain {
+  color: #ffffff;
+  transition: 0.2s;
+}
+/*end custom accordion*/
+
+/*custom video img*/
+.video_accordion img:first-child {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  background: #373839;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.video_accordion img:last-child {
+  position: absolute;
+  left: 47%;
+  margin-top: 16%;
+  opacity: 0.8;
+  cursor: pointer;
+}
+/*end custom video img*/
+
+/* tài nguyên*/
+.tai_nguyen p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--Orange-4);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #37383945;
+}
+
+.link_download {
+  margin-top: 2rem;
+}
+
+.link_download_one {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.link_download_one section {
+  width: 390px;
+  height: 32px;
+  background: #efefef;
+  border-radius: 4px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.link_download_one section img {
+  margin-right: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid #c9c4c0;
+}
+
+.link_download_one button {
+  width: 120px;
+  height: 32px;
+  background: var(--Orange-2);
+  border: 1px solid var(--Orange-4);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: bold;
+  color: var(--Orange-7);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.link_download_one button:active {
+  color: white;
+  background-color: var(--Orange-4);
+}
+
+.link_download p {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #292b2e;
+  opacity: 0.5;
+}
+
+/* end tài nguyên*/
+
+.tong_quan span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-5);
+  border-bottom: 1px solid var(--Orange-6);
+}
+
+.tong_quan .tong_quan_body_text {
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--Orange-7);
+  font-weight: normal;
+  margin-top: 10px;
+}
