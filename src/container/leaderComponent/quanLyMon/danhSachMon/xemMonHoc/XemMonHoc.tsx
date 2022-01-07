@@ -63,11 +63,11 @@ export default function XemMonHoc(props: any) {
               </TabList>
             </Box>
             <TabPanel value="1">
-              <section>
+              <section className="tong_quan_select_one">
                 <p>Giảng viên:</p>
                 <p>Mô tả:</p>
               </section>
-              <section>
+              <section className="tong_quan_select_two">
                 <p>{giangVien}</p>
                 <p>{genderText()}</p>
                 {moTa.length > 100 && (

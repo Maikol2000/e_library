@@ -40,7 +40,7 @@
 }
 
 .top_video img {
-  width: 13%;
+  width: 133px;
 }
 
 .video_doc {
@@ -89,17 +89,17 @@
   display: flex;
   justify-content: space-between;
 }
-.css-13xfq8m-MuiTabPanel-root section:first-child {
+.css-13xfq8m-MuiTabPanel-root .tong_quan_select_one {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.015em;
   color: var(--Orange-7);
-  width: 15%;
+  width: 10rem;
 }
-.css-13xfq8m-MuiTabPanel-root section:last-child {
+.css-13xfq8m-MuiTabPanel-root .tong_quan_select_two {
   font-size: 16px;
-  width: 85%;
+  width: 100%;
   opacity: 0.8;
 }
 /*end custom tab1*/
@@ -112,4 +112,18 @@
   font-size: 16px;
   letter-spacing: 0.015em;
   color: var(--Orange-4);
+}
+@media screen and (max-width: 1280px) {
+  .video_doc_img_one {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .video_doc_img_one {
+    height: 300px;
+  }
+  .bottom_video {
+    font-size: 16px;
+    height: auto;
+  }
 }

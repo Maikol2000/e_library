@@ -165,26 +165,6 @@
   border-right: 1px solid #c9c4c0;
 }
 
-.link_download_one button {
-  width: 120px;
-  height: 32px;
-  background: var(--Orange-2);
-  border: 1px solid var(--Orange-4);
-  box-sizing: border-box;
-  border-radius: 4px;
-  font-weight: bold;
-  color: var(--Orange-7);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-evenly;
-}
-
-.link_download_one button:active {
-  color: white;
-  background-color: var(--Orange-4);
-}
-
 .link_download p {
   font-style: italic;
   font-weight: normal;

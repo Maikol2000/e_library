@@ -4,7 +4,7 @@
   --Orange-5: #cc5c00;
   --Orange-4: #ff7506;
   --Orange-3: #ffa75e;
-  --Orange-2: #FFD8B8;
+  --Orange-2: #ffd8b8;
   --Orange-1: #fff9f4;
 }
 
@@ -27,3 +27,56 @@ li {
 a:hover {
   text-decoration: none !important;
 }
+
+/* custom select*/
+
+select {
+  appearance: none;
+}
+
+.select_main select {
+  background: #ffffff00;
+  border: 1px solid var(--Orange-7);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 7px;
+  font-size: 15px;
+  z-index: 2;
+  height: 32px;
+  margin-bottom: 3rem;
+}
+
+.img_select {
+  position: relative;
+  right: 32px;
+  border: solid 1px var(--Orange-7);
+  border-radius: 4px;
+  height: 32px;
+  width: 32px;
+  line-height: 30px;
+  text-align: center;
+  z-index: 1;
+}
+/*end custom select*/
+
+/*custom button red pink*/
+.custom_btn_red_pink {
+  width: 120px;
+  height: 32px;
+  background: var(--Orange-2);
+  border: 1px solid var(--Orange-4);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: bold;
+  color: var(--Orange-7);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.custom_btn_red_pink:active {
+  color: white;
+  background-color: var(--Orange-4);
+}
+/*end custom button red pink*/

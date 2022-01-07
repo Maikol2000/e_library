@@ -1,0 +1,33 @@
+.hoi_dap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.select_hoi_dap {
+  display: flex;
+}
+
+.select_main {
+  position: relative;
+  display: flex;
+}
+
+.select_hoi_dap_one {
+  width: 176px;
+}
+
+.select_hoi_dap_two {
+  width: 210px;
+}
+
+.select_hoi_dap_three {
+  width: 240px;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .select_hoi_dap {
+    display: block;
+  }
+}

@@ -5,7 +5,7 @@ import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 
 //reducer
-import { homeLeaderReducer } from "../components/leaderComponent/homeLeader/action/reducer";
+import { homeLeaderReducer } from "../container/leaderComponent/homeLeader/action/reducer";
 
 const rootReducer = combineReducers({
   homeLeaderReducer,

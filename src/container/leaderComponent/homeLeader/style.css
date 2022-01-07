@@ -217,7 +217,7 @@ section.tab_home {
 }
 
 .tab_home_content {
-  width: 53%;
+  width: 50%;
 }
 
 .tab_home_content span {
@@ -246,15 +246,20 @@ section.tab_home {
   text-transform: uppercase;
 }
 
-.tab_home_img {
+.tab_home_main_img_line2 {
   position: relative;
-  width: 44%;
+  width: 50%;
+}
+
+.tab_home_img {
+  width: 90%;
   border-radius: 10px;
 }
 
 .play_Circle {
   position: absolute;
-  margin-right: 9rem;
+  right: 40%;
+  top: 35%;
 }
 
 .cont {
@@ -462,7 +467,34 @@ section.tab_home {
 
 /* responsive */
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1280px) {
+  .cont {
+    align-items: flex-start;
+  }
+  .tab_home_img {
+    width: 80%;
+  }
+  .home_table_line_3 {
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tab_home_main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home_leader_line_3 {
+    display: block;
+  }
+  .home_table_line_3 {
+    width: 50%;
+  }
+  .home_leader_file_private {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .line_1_right_text_1 {
     font-size: 20px;
     margin-top: 22px;
@@ -470,13 +502,74 @@ section.tab_home {
   .line_1_right_text_2 {
     font-size: 15px;
   }
+  .cont {
+    display: block;
+  }
+  .tab_home_main_img_line2 {
+    width: 100%;
+    text-align: center;
+  }
+  .tab_home_content {
+    width: 100%;
+    text-align: center;
+  }
+  .home_leader_file_private_show {
+    height: 100%;
+  }
+  .file_private {
+    display: block;
+    height: 100%;
+  }
+  .file_private img {
+    width: 40%;
+    height: 40%;
+  }
+  .file_private_content span:nth-child(4) {
+    padding-bottom: 3rem;
+  }
+  .paginateBttn {
+    width: 55px;
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .home_leader_line_1 {
     display: inline;
   }
   .home_leader_line_1_right {
     margin-top: 10px;
+  }
+  .file_private img {
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home_leader_line_1_right {
+    display: block;
+  }
+  .home_leader_line_1_right section {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .tab_home_main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .home_leader_line_2_text {
+    margin: 3rem 0;
+  }
+  .paginateBttn {
+    left: 0;
+    top: 2rem;
+  }
+  .home_table_line_3 {
+    width: 100%;
+  }
+  .home_leader_file_private p:first-child {
+    margin: 3rem 0;
+  }
+  .home_leader_file_private_tab {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -1,8 +1,8 @@
 import { FC } from "react";
 import "./App.css";
-import Login from "./containers/share/login/Login";
+import Login from "./component/share/login/Login";
 import { Route, Switch } from "react-router-dom";
-import FageNotFound from "./containers/share/fageNotFound/FageNotFound";
+import FageNotFound from "./component/share/fageNotFound/FageNotFound";
 import LayOutLeader from "./layouts/LayOutLeader";
 
 const App: FC = () => {

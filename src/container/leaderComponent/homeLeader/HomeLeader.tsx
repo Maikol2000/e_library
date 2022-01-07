@@ -14,7 +14,7 @@ import play_Circle from "../../../assets/img/play_Circle.png";
 import file_1 from "../../../assets/img/file-1.png";
 
 import { RootState } from "../../../store/store";
-import SelectNienKhoa from "../../../containers/share/selectNienKhoa/SelectNienKhoa";
+import SelectNienKhoa from "../../../component/share/selectNienKhoa/SelectNienKhoa";
 
 // setting slick
 const settings = {
@@ -114,16 +114,19 @@ export const HomeLeader = () => {
                 return (
                   <section key={index} className="tab_home">
                     <section className="cont">
-                      <img
-                        src="https://picsum.photos/200"
-                        alt="..."
-                        className="tab_home_img"
-                      />
-                      <img
-                        src={play_Circle}
-                        alt="..."
-                        className="play_Circle"
-                      />
+                      <div className="tab_home_main_img_line2">
+                        <img
+                          src="https://picsum.photos/200"
+                          alt="..."
+                          className="tab_home_img"
+                        ></img>
+                        <img
+                          src={play_Circle}
+                          alt="..."
+                          className="play_Circle"
+                        />
+                      </div>
+
                       <section className="tab_home_content">
                         <span className="tab_text_1">{name}</span>
                         <span className="tab_text_2">{moTa}</span>
@@ -181,6 +184,12 @@ export const HomeLeader = () => {
                 .slice(pagesVisitedTwo, pagesVisitedTwo + docsPerPageTwo)
                 .map((doc: any, index: any) => {
                   const { giangVien, ngayGui, tenMonHoc, nameFile } = doc;
+                  const nameNew = () => {
+                    if (nameFile.length > 12) {
+                      return nameFile.slice(0,12) + "..."
+                    }
+                    return nameFile
+                  }
                   return (
                     <section
                       key={index}
@@ -189,7 +198,7 @@ export const HomeLeader = () => {
                       <section className="file_private">
                         <img src={file_1} alt="..." />
                         <section className="file_private_content">
-                          <span>{nameFile}</span>
+                          <span>{nameNew()}</span>
                           <span>{ngayGui}</span>
                           <span>{tenMonHoc}</span>
                           <span>Giảng viên: {giangVien}</span>

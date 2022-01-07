@@ -2,7 +2,11 @@
   position: relative;
 }
 
-.nav__bar .nav__bar_need {
+.navBarForMobile {
+  display: none;
+}
+
+.nav__bar_need {
   position: fixed;
   width: 90px;
   height: 100%;
@@ -35,41 +39,40 @@
   color: var(--Orange-7);
 }
 
-.nav__bar .nav__bar_need .img_nav {
+.img_nav {
   position: absolute;
-  width: 65px;
-  height: 40px;
+  width: 75%;
   top: 35px;
   left: 11px;
 }
 
-.nav__bar .nav__bar_need .list__item {
+.list__item {
   position: absolute;
   top: 160px;
   width: 100%;
 }
 
-.nav__bar .nav__bar_need .list__item li {
+.list__item li {
   text-align: center;
   list-style: none;
   position: relative;
 }
 
-.nav__bar .nav__bar_need .list__item li img {
+.list__item li img {
   width: 24px;
   margin-bottom: 25px;
   padding-top: 20px;
 }
 
-.nav__bar .nav__bar_need .list__item li .active {
+.list__item li .active {
   background: #fff9f48f;
   border-radius: 16px;
   transition: all 0.2s ease-in;
   padding: 20px;
 }
 
-.nav__bar_need .menu {
-  position: absolute;
+.menu {
+  position: fixed;
   width: 230px;
   left: -138px;
   transition: all 0.4s;
@@ -81,10 +84,10 @@
   opacity: 0;
 }
 
-.nav__bar_need:hover .menu {
+.nav__bar:hover .menu {
   left: 91px;
   opacity: 1;
-  z-index: 6;
+  z-index: 2;
 }
 
 .menu .menu__item {
@@ -150,3 +153,62 @@
   overflow: hidden;
   transition: all 0.4s;
 }
+
+@media screen and (max-width: 1280px) {
+  .nav__bar_need {
+    width: 65px;
+  }
+  .img_nav {
+    left: 8px;
+  }
+  .nav__bar:hover .menu {
+    left: 65px;
+  }
+  .menu {
+    width: 152px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navBarForMobile {
+    display: block;
+    color: var(--Orange-6);
+    margin-left: 1.7rem;
+  }
+
+  .nav__bar_need {
+    height: 8%;
+    overflow: hidden;
+  }
+
+  .activeNav {
+    height: 100%;
+    overflow: scroll;
+  }
+
+  .menu {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .menu.activeNav {
+    height: 100%;
+    overflow: scroll;
+  }
+}
+
+/* @media screen and (max-height: 600px) {
+  .nav__bar_need {
+    height: 100%;
+    overflow: scroll;
+  }
+  .menu {
+    overflow: scroll;
+  }
+} */

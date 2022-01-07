@@ -1,0 +1,17 @@
+.col_one {
+  margin-right: 5rem;
+}
+
+.col_two {
+  padding-top: 3rem;
+}
+
+@media screen and (max-width: 480px) {
+  .col_one {
+    margin-right: 0;
+  }
+
+  .col_two {
+    padding-top: 2rem;
+  }
+}

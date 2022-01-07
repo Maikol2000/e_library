@@ -5,11 +5,11 @@ import { Route, Switch } from "react-router-dom";
 import { HomeLeader } from "./homeLeader/HomeLeader";
 import DanhSachMon from "./quanLyMon/danhSachMon/DanhSachMon";
 import TroGiup from "./troGiup/TroGiup";
-import CaiDatHeThong from "../../components/leaderComponent/caiDatHeThong/CaiDatHeThong";
-import NganHangDeThi from "../../components/leaderComponent/nganHangDeThi/NganHangDeThi";
-import PhepDuyetTaiLieu from "../../components/leaderComponent/quanLyMon/phepDuyetTaiLieu/PhepDuyetTaiLieu";
-import TepRiengTu from "../../components/leaderComponent/tepRiengTu/TepRiengTu";
-import ThongBao from "../../components/leaderComponent/thongBao/ThongBao";
+import CaiDatHeThong from "./caiDatHeThong/CaiDatHeThong";
+import NganHangDeThi from "./nganHangDeThi/NganHangDeThi";
+import PhepDuyetTaiLieu from "./quanLyMon/phepDuyetTaiLieu/PhepDuyetTaiLieu";
+import TepRiengTu from "./tepRiengTu/TepRiengTu";
+import ThongBao from "./thongBao/ThongBao";
 import MonHocDetail from "./quanLyMon/danhSachMon/monHocDetail/monHocDetail";
 import XemMonHoc from "./quanLyMon/danhSachMon/xemMonHoc/XemMonHoc";
 

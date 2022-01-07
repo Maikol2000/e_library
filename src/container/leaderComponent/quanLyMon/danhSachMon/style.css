@@ -1,22 +1,22 @@
 .danh_sach_mon_leader {
+  position: relative;
   width: 100%;
   height: 80%;
   background: #ffffff;
   box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
   border-radius: 16px;
-  padding: 3.5rem;
+  padding: 1.5rem 3.5rem;
 }
 
 .danh_sach_mon_leader_custom_selection {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
 }
 
 .danh_sach_mon_list_tab {
   display: flex;
-  justify-content: space-between;
-  width: 55%;
+  margin-top: 2rem;
 }
 
 .danh_sach_mon_nien_khoa {
@@ -57,7 +57,6 @@
 /* custom input */
 .danh_sach_mon_custom_input {
   position: relative;
-  width: 30%;
 }
 
 .danh_sach_mon_custom_input input {
@@ -77,13 +76,6 @@
 /* end custom input */
 
 /* custom table */
-.danh_sach_mon_list_subject {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 92%;
-}
 
 .css-1q1u3t4-MuiTableRow-root {
   background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
@@ -94,13 +86,16 @@
 }
 
 .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
-  height: 62.03%;
+  height: 20.5rem;
 }
 /* end custom table */
 
 .danh_sach_mon_line_end {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
+  width: 90%;
 }
 
 /* custom input */
@@ -110,10 +105,11 @@
   font-size: 16px;
   line-height: 20px;
   color: var(--Orange-7);
+  width: 50%;
 }
 
 .danh_sach_mon_custom_input_line_end input {
-  width: 10%;
+  width: 30px;
   border: solid 1px var(--Orange-4);
   border-radius: 4px;
   padding-left: 5px;
@@ -124,6 +120,7 @@
 .paginateBttnDSM {
   display: flex;
   justify-content: flex-end;
+  width: 50%;
 }
 .paginateBttnDSM li {
   margin-right: 2rem;
@@ -160,4 +157,44 @@
 }
 .choPheDuyet {
   color: #7c7c7c;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 1024px) {
+  .danh_sach_mon_leader_custom_selection {
+    display: block;
+  }
+  .danh_sach_mon_custom_input {
+    margin-bottom: 2rem;
+  }
+  .danh_sach_mon_leader {
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .danh_sach_mon_list_tab {
+    display: block;
+  }
+  .danh_sach_mon_line_end {
+    display: block;
+  }
+  .paginateBttnDSM {
+    margin: 1rem 0;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .select_main {
+    margin-bottom: -2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .danh_sach_mon_leader {
+    padding: 0px 16px;
+  }
+  .select_main {
+    width: 119%
+  }
 }
