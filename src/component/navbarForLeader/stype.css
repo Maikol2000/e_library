@@ -87,7 +87,7 @@
 .nav__bar:hover .menu {
   left: 91px;
   opacity: 1;
-  z-index: 2;
+  z-index: 7;
 }
 
 .menu .menu__item {
@@ -179,11 +179,13 @@
   .navBarForMobile {
     display: block;
     color: var(--Orange-6);
-    margin-left: 1.7rem;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 1rem;
   }
 
   .nav__bar_need {
-    height: 8%;
+    height: 20%;
     overflow: hidden;
   }
 
@@ -201,14 +203,28 @@
     height: 100%;
     overflow: scroll;
   }
+  
+  .img_nav {
+    top: 5rem;
+  }
+  .scrollNav {
+    height: 6%;
+  }
+  .activeNav.scrollNav {
+    height: 100%;
+  }
+
+  .scrollNav .navBarForMobile {
+    padding-top: 0;
+    font-size: 15px;
+  }
 }
 
-/* @media screen and (max-height: 600px) {
+@media screen and (max-height: 600px) {
   .nav__bar_need {
-    height: 100%;
     overflow: scroll;
   }
   .menu {
     overflow: scroll;
   }
-} */
+}

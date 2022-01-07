@@ -18,27 +18,46 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBarNavBarForLeader() {
   const [dropMenu, setdropMenu] = useState(false);
+  const [nav, setnav] = useState(false);
+  const [scroll, setScroll] = useState(false)
+
   const drop = () => {
     setdropMenu(!dropMenu);
   };
 
-  const [nav, setnav] = useState(true);
+  const navBar = document.querySelector(".nav__bar_need");
+  const navBarMenu = document.querySelector(".menu");
 
-  
   const activeNav = () => {
-    setnav(!nav)
-    const navBar = document.querySelector(".nav__bar_need")
-    const navBarMenu = document.querySelector(".menu")
-    navBar?.classList.toggle("activeNav")
-    navBarMenu?.classList.toggle("activeNav")
-  }
+    setnav(!nav);
+    navBar?.classList.toggle("activeNav");
+    navBarMenu?.classList.toggle("activeNav");
+  };
+
+  const onChangeNav = () => {
+    if (window.scrollY > 100) {
+      setScroll(true)
+    } else {
+      setScroll(false)
+    }
+  };
+
+  window.addEventListener("scroll", onChangeNav);
+
+  useEffect(() => {
+    if (window.scrollY > 100) {
+      navBar?.classList.toggle("scrollNav");
+    } else {
+      navBar?.classList.remove("scrollNav");
+    }
+  }, [window.scrollY]);
 
   return (
     <>
       <div className="nav__bar">
         <div className="nav__bar_need" style={{ transition: "all 0.5s" }}>
           <section className="navBarForMobile" onClick={activeNav}>
-            {nav ? <Icon icon={faBars} /> : <Icon icon={faTimes} />}
+            {!nav ? <Icon icon={faBars} /> : <Icon icon={faTimes} />}
           </section>
           <img className="img_nav" src={Group} alt="..." />
           <ul
