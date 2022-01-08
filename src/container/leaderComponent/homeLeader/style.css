@@ -189,8 +189,9 @@ div {
 
 /* end custom circle */
 .home_leader_line_2 {
-  margin: 5rem 0;
   position: relative;
+  height: 100%;
+  margin: 5rem 0;
 }
 
 .tab_home_main {
@@ -209,11 +210,12 @@ div {
 
 /* custom tab */
 
-section.tab_home {
+.tab_home {
   padding: 10px;
   background: #ffffff;
   box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
   border-radius: 8px;
+  height: 9rem;
 }
 
 .tab_home_content {
@@ -259,12 +261,12 @@ section.tab_home {
 .play_Circle {
   position: absolute;
   right: 40%;
-  top: 35%;
+  top: 5%;
 }
 
 .cont {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
 }
 
@@ -471,11 +473,19 @@ section.tab_home {
   .cont {
     align-items: flex-start;
   }
+  .tab_home {
+    height: 10rem;
+  }
   .tab_home_img {
     width: 80%;
   }
   .home_table_line_3 {
     height: 20rem;
+  }
+  .play_Circle {
+    top: 3%;
+    width: 30%;
+    right: 44%;
   }
 }
 
@@ -507,7 +517,11 @@ section.tab_home {
   }
   .tab_home_main_img_line2 {
     width: 100%;
+    height: 100%;
     text-align: center;
+  }
+  .tab_home {
+    height: 100%;
   }
   .tab_home_content {
     width: 100%;
@@ -529,6 +543,11 @@ section.tab_home {
   }
   .paginateBttn {
     width: 55px;
+  }
+  .play_Circle {
+    top: 35%;
+    width: 20%;
+    right: 40%;
   }
 }
 

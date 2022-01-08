@@ -11,10 +11,10 @@ export default function LayOutLeader() {
   return (
     <>
       <div className="row" style={{ flexWrap: "nowrap" }}>
-        <section className="col-1 col_one">
+        <section className="col_one">
           <NavBarNavBarForLeader />
         </section>
-        <section className="col-10 col_two">
+        <section className="col_two">
           <Breadcrumbs />
           <LeaderCompoennt />
         </section>

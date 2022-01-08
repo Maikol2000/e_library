@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./style.css";
 //component
-import SelectNienKhoa from "../../../../component/share/selectNienKhoa/SelectNienKhoa";
 //img
 import arrow from "../../../../assets/img/arrow.png";
 import fi_search from "../../../../assets/img/fi_search.png";
@@ -32,6 +31,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import SelectNienKhoa from "../../../share/selectNienKhoa/SelectNienKhoa";
 
 export default function DanhSachMon() {
   const dispatch = useDispatch();

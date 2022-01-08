@@ -25,9 +25,32 @@
   width: 240px;
 }
 
-
 @media screen and (max-width: 1280px) {
   .select_hoi_dap {
     display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .select_main {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hoi_dap {
+    display: block;
+  }
+  .hoi_dap_btn {
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .select_main {
+    margin-bottom: -2rem;
+  }
+  .hoi_dap_btn {
+    margin-top: 0;
   }
 }

@@ -5,8 +5,9 @@ div {
 
 .login__bg {
   position: relative;
-  background: url(../../../assets/img/login.png) no-repeat;
+  background: url(../../../../assets/img/login.png) no-repeat;
   background-size: 100% 100vh;
+  height: 100vh;
 }
 
 .login__bg img {

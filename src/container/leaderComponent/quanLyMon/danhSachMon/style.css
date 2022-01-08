@@ -121,6 +121,7 @@
   display: flex;
   justify-content: flex-end;
   width: 50%;
+  overflow: hidden;
 }
 .paginateBttnDSM li {
   margin-right: 2rem;
@@ -185,16 +186,28 @@
     justify-content: flex-start;
     width: 100%;
   }
-  .select_main {
-    margin-bottom: -2rem;
+  .danh_sach_mon_custom_input_line_end {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .danh_sach_mon_leader {
-    padding: 0px 16px;
+    padding: 0.2rem 2rem;
+    height: 48rem;
+    width: 100%;
   }
   .select_main {
-    width: 119%
+    width: 119%;
+  }
+  .danh_sach_mon_line_end {
+    bottom: auto;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .danh_sach_mon_line_end {
+    width: 80%;
   }
 }

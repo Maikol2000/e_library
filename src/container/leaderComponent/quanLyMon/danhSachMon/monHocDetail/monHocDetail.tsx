@@ -34,7 +34,7 @@ export default function DanhSachMonDetail(props: any) {
         <section className="thongTinDoc">
           <section className="thongTinDocMot">
             <section className="thongTinDocsMottext">
-              <p>Mã môn học: </p>
+              <p>Mã môn học:</p>
               <p>Môn học:</p>
             </section>
             <section>
@@ -93,7 +93,7 @@ export default function DanhSachMonDetail(props: any) {
                   <Link
                     to={{
                       pathname: `/page-leader/Danh sách môn học/${tenMonHoc}`,
-                      state: props.location.state
+                      state: props.location.state,
                     }}
                   >
                     <img src={laptop} alt="..." />
@@ -233,7 +233,7 @@ export default function DanhSachMonDetail(props: any) {
                         <img src={Vector} alt="..." />
                         <span>HTKL_KT45P_10A1.doc</span>
                       </section>
-                      <button>
+                      <button className="custom_btn_red_pink">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
@@ -253,7 +253,7 @@ export default function DanhSachMonDetail(props: any) {
                         <img src={Vector} alt="..." />
                         <span>HTKL_KT45P_10A1.doc</span>
                       </section>
-                      <button>
+                      <button className="custom_btn_red_pink">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"

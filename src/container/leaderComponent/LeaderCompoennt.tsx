@@ -15,7 +15,7 @@ import XemMonHoc from "./quanLyMon/danhSachMon/xemMonHoc/XemMonHoc";
 
 export default function LeaderCompoennt() {
   return (
-    <div className="content">
+    <>
       <Switch>
         <Route exact path="/page-leader/Trang Chủ" component={HomeLeader} />
         <Route
@@ -38,6 +38,6 @@ export default function LeaderCompoennt() {
         <Route path="/page-leader/Cài đặt hệ thống" component={CaiDatHeThong} />
         <Route path="/page-leader/Trợ giúp" component={TroGiup} />
       </Switch>
-    </div>
+    </>
   );
 }

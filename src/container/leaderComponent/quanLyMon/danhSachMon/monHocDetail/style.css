@@ -5,7 +5,7 @@
   border: 1px solid var(--Orange-4);
   box-sizing: border-box;
   border-radius: 16px;
-  padding: 2rem 3rem;
+  padding: 2rem 1rem;
   margin: 3rem 0;
 }
 
@@ -22,8 +22,13 @@
 }
 .thongTinDocMot {
   display: flex;
+  align-items: flex-start;
   width: 25%;
   border-right: 1px solid #c9c4c0;
+}
+
+.thongTinDocMot .thongTinDocsMottext {
+  width: 7rem;
 }
 
 .thongTinDocsMottext {
@@ -32,13 +37,17 @@
   line-height: 20px;
   letter-spacing: 0.015em;
   color: var(--Orange-7);
-  margin-right: 1rem;
 }
 
 .thongTinDocHai {
   display: flex;
-  width: 75%;
+  align-items: flex-start;
   padding-left: 5rem;
+  width: 75%;
+}
+
+.thongTinDocHai .thongTinDocsMottext {
+  width: 6rem;
 }
 
 .thongTinDocMot section,
@@ -111,8 +120,10 @@
 /*end custom accordion*/
 
 /*custom video img*/
-.video_accordion img:first-child {
+.video_accordion {
   position: relative;
+}
+.video_accordion img:first-child {
   width: 60%;
   margin: auto;
   background: #373839;
@@ -123,7 +134,8 @@
 .video_accordion img:last-child {
   position: absolute;
   left: 47%;
-  margin-top: 16%;
+  top: 35%;
+  width: 5%;
   opacity: 0.8;
   cursor: pointer;
 }
@@ -191,4 +203,45 @@
   color: var(--Orange-7);
   font-weight: normal;
   margin-top: 10px;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 800px) {
+  .tongQuanDanhSachDT {
+    padding: 1rem;
+    height: auto;
+  }
+  .thongTinDoc {
+    display: block;
+  }
+  .thongTinDocMot {
+    width: 100%;
+    border: none;
+  }
+  .thongTinDocHai {
+    width: 100%;
+    padding: 0;
+  }
+  .thongTinDocHai .thongTinDocsMottext {
+    width: 11rem;
+  }
+  .thongTinDocsMottext {
+    margin-right: 16px;
+  }
+  .link_download_one {
+    display: block;
+  }
+  .link_download_one section {
+    margin-bottom: 10px;
+  }
+  .video_accordion img:last-child {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tongQuanDanhSachDT {
+    width: 18rem;
+  }
 }

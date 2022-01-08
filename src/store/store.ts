@@ -6,15 +6,17 @@ import thunk from "redux-thunk";
 
 //reducer
 import { homeLeaderReducer } from "../container/leaderComponent/homeLeader/action/reducer";
+import { authReduser } from "../container/share/auth/login/module/reducer";
 
 const rootReducer = combineReducers({
+  authReduser,
   homeLeaderReducer,
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: [""],
+  whitelist: ["authReduser"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -26,6 +28,6 @@ const store = createStore(
 
 const persistor = persistStore(store);
 
-export type RootState = ReturnType<typeof rootReducer>
+export type RootState = ReturnType<typeof rootReducer>;
 
 export { store, persistor };

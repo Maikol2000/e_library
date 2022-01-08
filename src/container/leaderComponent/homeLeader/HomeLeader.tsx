@@ -14,7 +14,7 @@ import play_Circle from "../../../assets/img/play_Circle.png";
 import file_1 from "../../../assets/img/file-1.png";
 
 import { RootState } from "../../../store/store";
-import SelectNienKhoa from "../../../component/share/selectNienKhoa/SelectNienKhoa";
+import SelectNienKhoa from "../../share/selectNienKhoa/SelectNienKhoa";
 
 // setting slick
 const settings = {
