@@ -74,6 +74,7 @@
 .menu {
   position: fixed;
   width: 230px;
+  height: 100%;
   left: -138px;
   transition: all 0.4s;
   background: #ffffff;

@@ -11,6 +11,7 @@
 .select_main {
   position: relative;
   display: flex;
+  height: 100%;
 }
 
 .select_hoi_dap_one {
@@ -33,7 +34,7 @@
 
 @media screen and (max-width: 800px) {
   .select_main {
-    margin-bottom: 1rem;
+    margin-bottom: -2rem;
   }
 }
 
@@ -49,6 +50,7 @@
 @media screen and (max-width: 480px) {
   .select_main {
     margin-bottom: -2rem;
+    width: 119%;
   }
   .hoi_dap_btn {
     margin-top: 0;

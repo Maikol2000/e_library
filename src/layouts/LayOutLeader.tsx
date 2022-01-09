@@ -3,10 +3,9 @@ import "./style.css"
 import LeaderCompoennt from "../container/leaderComponent/LeaderCompoennt";
 import Breadcrumbs from "../component/breadcrumbs/Breadcrumbs";
 import NavBarNavBarForLeader from "../component/navbarForLeader/NavBarForLeader";
+import LogOut from "../container/share/auth/logOut/LogOut";
 
 export default function LayOutLeader() {
-  // const isLoggin = Boolean(localStorage.getItem("access_token"))
-  // if (!isLoggin) return <Redirect to="/login" />
 
   return (
     <>
@@ -14,6 +13,7 @@ export default function LayOutLeader() {
         <section className="col_one">
           <NavBarNavBarForLeader />
         </section>
+        <LogOut />
         <section className="col_two">
           <Breadcrumbs />
           <LeaderCompoennt />

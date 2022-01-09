@@ -15,7 +15,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default getFirestore();
+export const stores = getFirestore();
 export const auth = getAuth();
 
 export const login = (email: any, pass: any) => {

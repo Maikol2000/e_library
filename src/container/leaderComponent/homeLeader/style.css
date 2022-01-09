@@ -1,7 +1,3 @@
-div {
-  height: 100%;
-}
-
 .home_leader_main_text {
   font-size: 30px;
   letter-spacing: 0.015em;
@@ -261,7 +257,7 @@ div {
 .play_Circle {
   position: absolute;
   right: 40%;
-  top: 5%;
+  top: 31%;
 }
 
 .cont {
@@ -386,7 +382,7 @@ div {
   font-weight: 700;
 }
 
-.home_leader_file_private p:last-child {
+.home_leader_file_private .home_leader_file_private_text {
   font-style: italic;
   font-weight: normal;
   font-size: 16px;

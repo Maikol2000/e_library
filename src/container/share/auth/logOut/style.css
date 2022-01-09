@@ -1,0 +1,35 @@
+.log_out_main {
+  position: absolute;
+  right: 5rem;
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 15.5rem;
+  z-index: 8;
+}
+
+.log_in_out {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+  border-right: solid 1px var(--Orange-6);
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.log_in_out img {
+  width: 25px;
+}
+
+.log_in_out span {
+  font-weight: bold;
+  letter-spacing: 0.015em;
+}
+
+.btn_log_out {
+  cursor: pointer;
+  color: var(--Orange-4);
+  border-bottom: solid 1px var(--Orange-4);
+  z-index: 8;
+}

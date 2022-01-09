@@ -17,6 +17,7 @@ export default function DanhSachMonDetail(props: any) {
   const [bg1, setBg1] = useState(false);
   const [bg2, setBg2] = useState(false);
   const [bg3, setBg3] = useState(false);
+
   const onChangeBgAccordionOne = () => {
     setBg1(!bg1);
   };
@@ -56,10 +57,9 @@ export default function DanhSachMonDetail(props: any) {
       </section>
       <section className="danhSachChuDe">
         <p>Danh sách chủ đề</p>
-
         <div className="accordion" id="accordionExample">
-          <div className="card">
-            <div
+          <section className="card">
+            <section
               className={`card-header custom_header_accordion ${
                 bg1 && "card_custom_bg_accordion"
               }`}
@@ -81,15 +81,15 @@ export default function DanhSachMonDetail(props: any) {
               <span className="danhSachChuDeTextMain">
                 Giới thiệu chung về {tenMonHoc}
               </span>
-            </div>
-            <div
+            </section>
+            <section
               id="collapseOne"
               className="collapse"
               aria-labelledby="headingOne"
               data-parent="#accordionExample"
             >
-              <div className="card-body">
-                <div className="video_accordion text-center">
+              <section className="card-body">
+                <section className="video_accordion text-center">
                   <Link
                     to={{
                       pathname: `/page-leader/Danh sách môn học/${tenMonHoc}`,
@@ -99,8 +99,8 @@ export default function DanhSachMonDetail(props: any) {
                     <img src={laptop} alt="..." />
                     <img src={play_Circle} alt="..." />
                   </Link>
-                </div>
-                <div className="tai_nguyen">
+                </section>
+                <section className="tai_nguyen">
                   <p>Tài nguyên</p>
                   <section className="link_download">
                     <section className="link_download_one">
@@ -147,9 +147,9 @@ export default function DanhSachMonDetail(props: any) {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </section>
-                </div>
-                <div className="card">
-                  <div
+                </section>
+                <section className="card">
+                  <section
                     className={`card-header custom_header_accordion ${
                       bg3 && "card_custom_bg_accordion"
                     }`}
@@ -172,8 +172,8 @@ export default function DanhSachMonDetail(props: any) {
                       {tenMonHoc} đã thay đổi sự phát triển của nền kinh tế thế
                       giới
                     </span>
-                  </div>
-                  <div
+                  </section>
+                  <section
                     id="collapseThree"
                     className="collapse"
                     aria-labelledby="headingThree"
@@ -187,13 +187,13 @@ export default function DanhSachMonDetail(props: any) {
                         doloremque autem, illo et sed, nulla amet sit sunt?
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div
+                  </section>
+                </section>
+              </section>
+            </section>
+          </section>
+          <section className="card">
+            <section
               className={`card-header custom_header_accordion ${
                 bg2 && "card_custom_bg_accordion"
               }`}
@@ -213,19 +213,19 @@ export default function DanhSachMonDetail(props: any) {
                 />
               </a>
               <span className="danhSachChuDeTextMain">{tenMonHoc}</span>
-            </div>
-            <div
+            </section>
+            <section
               id="collapseTwo"
               className="collapse"
               aria-labelledby="headingTwo"
               data-parent="#accordionExample"
             >
-              <div className="card-body">
-                <div className="video_accordion text-center">
+              <section className="card-body">
+                <section className="video_accordion text-center">
                   <img src={laptop} alt="..." />
                   <img src={play_Circle} alt="..." />
-                </div>
-                <div className="tai_nguyen">
+                </section>
+                <section className="tai_nguyen">
                   <p>Tài nguyên</p>
                   <section className="link_download">
                     <section className="link_download_one">
@@ -272,10 +272,10 @@ export default function DanhSachMonDetail(props: any) {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </section>
-                </div>
-              </div>
-            </div>
-          </div>
+                </section>
+              </section>
+            </section>
+          </section>
         </div>
       </section>
     </>

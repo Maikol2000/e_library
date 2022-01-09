@@ -58,7 +58,11 @@
 /*end custom video*/
 
 /*custom tabs*/
-.css-w8dmq8 {
+.css-1gsv261 {
+  height: 7%;
+}
+
+.css-heg063-MuiTabs-flexContainer {
   height: 10%;
 }
 
@@ -78,9 +82,9 @@
   background-color: var(--Orange-4) !important;
   height: 5px !important;
 }
-.css-jpln7h-MuiTabs-scroller {
-  overflow: auto !important;
-}
+/* .css-jpln7h-MuiTabs-scroller {
+  height: 12%;
+} */
 /*end custom tabs*/
 
 /*custom tab1*/

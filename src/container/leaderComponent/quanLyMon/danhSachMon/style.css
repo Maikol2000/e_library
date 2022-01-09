@@ -6,6 +6,7 @@
   box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
   border-radius: 16px;
   padding: 1.5rem 3.5rem;
+  height: 590px;
 }
 
 .danh_sach_mon_leader_custom_selection {
@@ -170,11 +171,15 @@
     margin-bottom: 2rem;
   }
   .danh_sach_mon_leader {
-    height: 90%;
+    height: 623px;
+    padding: 1px 2rem;
   }
 }
 
 @media screen and (max-width: 800px) {
+  .danh_sach_mon_leader {
+    height: 752px;
+  }
   .danh_sach_mon_list_tab {
     display: block;
   }
@@ -196,9 +201,6 @@
     padding: 0.2rem 2rem;
     height: 48rem;
     width: 100%;
-  }
-  .select_main {
-    width: 119%;
   }
   .danh_sach_mon_line_end {
     bottom: auto;

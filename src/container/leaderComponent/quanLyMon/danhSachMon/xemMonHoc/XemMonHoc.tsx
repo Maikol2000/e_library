@@ -50,7 +50,7 @@ export default function XemMonHoc(props: any) {
           <img className="video_doc_img_one" src={laptop} alt="..." />
           <img className="video_doc_img_two" src={play_Circle} alt="..." />
         </section>
-        <Box sx={{ width: "100%", typography: "body1" }}>
+        <Box sx={{ width: "100%", typography: "body1"}}>
           <TabContext value={value}>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
               <TabList

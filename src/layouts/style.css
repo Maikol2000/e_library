@@ -5,6 +5,7 @@
 }
 
 .col_two {
+  position: relative;
   padding: 35px 15px 15px;
   width: 80%;
 }

@@ -5,12 +5,14 @@ import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 
 //reducer
-import { homeLeaderReducer } from "../container/leaderComponent/homeLeader/action/reducer";
+import { dsLichXuDungTaiLieuReducer } from "../container/leaderComponent/homeLeader/moduleLichXuDungTaiLieu/reducer";
+import dsTepRiengTuReducer from "../container/leaderComponent/homeLeader/moduleTepRiengTu/reducer";
 import { authReduser } from "../container/share/auth/login/module/reducer";
 
 const rootReducer = combineReducers({
+  dsLichXuDungTaiLieuReducer,
+  dsTepRiengTuReducer,
   authReduser,
-  homeLeaderReducer,
 });
 
 const persistConfig = {
@@ -30,4 +32,4 @@ const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof rootReducer>;
 
-export { store, persistor };
+export default store;

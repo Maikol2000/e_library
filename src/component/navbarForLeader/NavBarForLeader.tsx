@@ -55,7 +55,7 @@ export default function NavBarNavBarForLeader() {
   return (
     <>
       <div className="nav__bar">
-        <div className="nav__bar_need" style={{ transition: "all 0.5s" }}>
+        <section className="nav__bar_need" style={{ transition: "all 0.5s" }}>
           <section className="navBarForMobile" onClick={activeNav}>
             {!nav ? <Icon icon={faBars} /> : <Icon icon={faTimes} />}
           </section>
@@ -114,8 +114,8 @@ export default function NavBarNavBarForLeader() {
               </NavLink>
             </li>
           </ul>
-        </div>
-        <div className="menu">
+        </section>
+        <section className="menu">
           <ul className="menu__item">
             <li className="home__nav">
               <NavLink
@@ -172,7 +172,7 @@ export default function NavBarNavBarForLeader() {
               </NavLink>
             </li>
           </ul>
-        </div>
+        </section>
       </div>
     </>
   );

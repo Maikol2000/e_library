@@ -12,6 +12,7 @@ import TepRiengTu from "./tepRiengTu/TepRiengTu";
 import ThongBao from "./thongBao/ThongBao";
 import MonHocDetail from "./quanLyMon/danhSachMon/monHocDetail/monHocDetail";
 import XemMonHoc from "./quanLyMon/danhSachMon/xemMonHoc/XemMonHoc";
+import TrangCaNhan from "../trangCaNhan/TrangCaNhan";
 
 export default function LeaderCompoennt() {
   return (
@@ -37,6 +38,7 @@ export default function LeaderCompoennt() {
         <Route path="/page-leader/Thông báo" component={ThongBao} />
         <Route path="/page-leader/Cài đặt hệ thống" component={CaiDatHeThong} />
         <Route path="/page-leader/Trợ giúp" component={TroGiup} />
+        <Route path="/page-leader/Thông tin cá nhân" component={TrangCaNhan}/>
       </Switch>
     </>
   );

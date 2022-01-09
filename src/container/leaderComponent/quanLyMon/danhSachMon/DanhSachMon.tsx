@@ -19,7 +19,7 @@ import {
   Paper,
 } from "@mui/material";
 //action
-import { actDanhSachTepriengTu } from "../../homeLeader/action/action";
+
 //type root
 import { RootState } from "../../../../store/store";
 //Paginate
@@ -32,6 +32,8 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import SelectNienKhoa from "../../../share/selectNienKhoa/SelectNienKhoa";
+import { actDanhSachTepriengTu } from "../../homeLeader/moduleTepRiengTu/action";
+import Loading from "../../../share/loading/Loading";
 
 export default function DanhSachMon() {
   const dispatch = useDispatch();
@@ -40,10 +42,10 @@ export default function DanhSachMon() {
     dispatch(actDanhSachTepriengTu());
   }, []);
 
-  const danhSachTepRiengTuDaTaiLenGanDay = useSelector(
+  const {danhSachTepRiengTuDaTaiLenGanDay, loading} = useSelector(
     (state: RootState) =>
-      state.homeLeaderReducer.danhSachTepRiengTuDaTaiLenGanDay
-  );
+      state.dsTepRiengTuReducer
+  )
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -72,7 +74,7 @@ export default function DanhSachMon() {
   const docsPerPage = perPage;
   const pagesVisited = pageNumber * docsPerPage;
   const pageCount = Math.ceil(
-    danhSachTepRiengTuDaTaiLenGanDay.length / docsPerPage
+    danhSachTepRiengTuDaTaiLenGanDay?.length / docsPerPage
   );
   const changePage = ({ selected }: any) => {
     setPageNumber(selected);
@@ -84,7 +86,7 @@ export default function DanhSachMon() {
     return setsearch(e.target.value);
   };
 
-  const filteredDocs = danhSachTepRiengTuDaTaiLenGanDay.filter((docs: any) => {
+  const filteredDocs = danhSachTepRiengTuDaTaiLenGanDay?.filter((docs: any) => {
     if (search) {
       return docs.giangVien.toLowerCase().indexOf(search.toLowerCase()) != -1;
     } else {
@@ -94,6 +96,7 @@ export default function DanhSachMon() {
 
   return (
     <>
+    {loading && <Loading />}
       <section className="danh_sach_mon_nien_khoa">
         <SelectNienKhoa />
       </section>
@@ -178,7 +181,7 @@ export default function DanhSachMon() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {filteredDocs.slice(pagesVisited, pagesVisited + docsPerPage).map(
+              {filteredDocs?.slice(pagesVisited, pagesVisited + docsPerPage)?.map(
                 (
                   row: {
                     giangVien: any;

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./stype.css";
+
+import { BrowserRouter, Route, Router, Switch } from "react-router-dom";
+
 //img
 import shield from "../../../../assets/img/shield.png";
 import Frame from "../../../../assets/img/Frame-1.png";
@@ -10,18 +13,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { actLogin } from "./module/action";
 import { RootState } from "../../../../store/store";
-import Loading from "../loading/Loading";
+import Loading from "../../loading/Loading";
 import { Redirect } from "react-router-dom";
+import LoginMain from "./loginMain/LoginMain";
+import RsPass from "./resetPassword/RsPass";
 
 export default function Login() {
-  const dispatch = useDispatch();
-  const [auth, setauth] = useState<any>({ email: "", password: "" });
-
-  const login = (e: any) => {
-    e.preventDefault();
-    const { email, password } = auth;
-    dispatch(actLogin(email, password));
-  };
   const loading = useSelector((state: RootState) => state.authReduser.loading);
   const currentUser = useSelector(
     (state: RootState) => state.authReduser.currentUser
@@ -35,39 +32,10 @@ export default function Login() {
       <div className="login__bg">
         <img src={Frame} alt="..." />
         <div className="form__login">
-          <h1>Đăng nhập</h1>
-          <form>
-            <div className="form-group">
-              <label>Tên đăng nhập</label>
-              <section>
-                <FontAwesomeIcon icon={faUserCircle} className="icon1" />
-                <input
-                  name="email"
-                  onChange={(e) => setauth({ ...auth, email: e.target.value })}
-                  type="text"
-                  className="form-control"
-                />
-              </section>
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputPassword1">Mật khẩu</label>
-              <section>
-                <img src={shield} alt="..." className="icon2" />
-                <input
-                  name="password"
-                  onChange={(e) =>
-                    setauth({ ...auth, password: e.target.value })
-                  }
-                  type="password"
-                  className="form-control"
-                />
-              </section>
-            </div>
-            <p>Quên mật khẩu?</p>
-            <button onClick={login} type="button" className="btn btn-primary">
-              Đăng nhập
-            </button>
-          </form>
+            <Switch>
+              <Route exact path="/login" component={LoginMain} />
+              <Route path="/login/reset-password" component={RsPass} />
+            </Switch>
         </div>
       </div>
     </>
