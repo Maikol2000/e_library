@@ -1,0 +1,106 @@
+.custom_model_for_md_change_img {
+  text-align: center;
+}
+
+.warn_text_model_change {
+  color: var(--Orange-7);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.warn_text_model_change img {
+  margin-right: 10px;
+}
+
+/*custom img upload*/
+.modal-body .custom_img_model_change .reactEasyCrop_Container,
+.modal-body .custom_img_model_change {
+  width: 368px;
+  height: 440px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.reactEasyCrop_CropArea {
+  border-radius: 50%;
+}
+/*end custom img upload*/
+
+/*custom range*/
+.custom_range_model_change {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 70%;
+}
+
+.custom_range_model_change .css-53tbrc-MuiSlider-root {
+  width: 440px;
+}
+
+.custom_range_model_change .css-53tbrc-MuiSlider-root {
+  color: var(--Orange-4);
+}
+
+.custom_range_model_change .css-14pt78w-MuiSlider-rail {
+  background: #c9c4c0;
+  height: 4px;
+}
+
+/*end custom range*/
+
+/*custom type file*/
+.custom_file_model_change input[type="file"] {
+  display: none;
+}
+
+.custom_file_model_change label {
+  width: 171px;
+  height: 32px;
+  background: var(--Orange-2);
+  border: 1px solid var(--Orange-4);
+  box-sizing: border-box;
+  border-radius: 4px;
+  line-height: 1.7rem;
+  cursor: pointer;
+}
+
+/*end custom type file*/
+
+/*custom button*/
+.custom_btn_model_change {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.custom_btn_model_change button:first-child {
+  width: 160px;
+  height: 52px;
+  background: #c9c4c0;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+}
+
+.custom_btn_model_change button:last-child {
+  width: 160px;
+  height: 52px;
+  background: var(--Orange-4);
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+}
+
+/*end custom button*/

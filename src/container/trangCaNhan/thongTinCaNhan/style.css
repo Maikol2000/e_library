@@ -1,0 +1,124 @@
+.thong_tin_chung {
+  background: #cc5c00;
+  border-radius: 16px 16px 0px 0px;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+  padding: 0.7rem 4rem;
+}
+
+/*custom show img */
+.change_img_before_after {
+  position: relative;
+}
+
+.change_img_before_after .change_img_bg_text {
+  width: 232px;
+  height: 232px;
+  background: #c5c5c5;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.change_img_before_after .change_img_bg_text span {
+  width: 113px;
+  height: 181px;
+  font-size: 144px;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+}
+
+.change_img_before_after #form_change_info_icon {
+  position: absolute;
+  left: 38%;
+  bottom: 5%;
+  cursor: pointer;
+}
+
+.custom_avatar {
+  width: 232px;
+  height: 232px;
+  border-radius: 50%;
+}
+/*end custom show img */
+
+/*custom form*/
+.form_change_info {
+  width: 100%;
+  height: 300px;
+  box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+  border-radius: 16px;
+}
+
+.form_change_info {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+.change_img {
+  width: 25%;
+}
+
+.form_thong_tin_chung {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.form_group_custom_thong_tin_chung {
+  display: flex;
+  align-items: center;
+  width: 23rem;
+}
+
+.form_group_custom_thong_tin_chung label {
+  width: 53%;
+}
+
+.form_group_custom_thong_tin_chung input {
+  width: 100%;
+  padding: 8px 16px;
+  height: 40px;
+  background: #e1e1e1;
+  border-radius: 8px;
+}
+
+.form_group_custom_thong_tin_chung_select {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+
+.form_group_custom_thong_tin_chung_select label {
+  width: 53%;
+}
+
+.form_group_custom_thong_tin_chung_select .form-group {
+  width: 100%;
+  position: relative;
+}
+
+select.custom_thong_tin_chung_select {
+  width: 104px;
+  height: 40px;
+  background: #e1e1e1;
+}
+
+.form_group_custom_thong_tin_chung_select .form-group img {
+  position: absolute;
+  right: 62%;
+  top: 40%;
+}
+
+#custom-text-form-for-address-input {
+  height: 94px;
+  background: #e1e1e1;
+  border-radius: 8px;
+}
+
+.custom-text-form-for-address {
+  align-items: flex-start;
+}
+/*end custom form*/

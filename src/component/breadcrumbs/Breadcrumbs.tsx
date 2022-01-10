@@ -4,14 +4,13 @@ import { Breadcrumbs as BC, Link, Typography } from "@mui/material";
 import { withRouter } from "react-router-dom";
 
 function Breadcrumbs(props: any) {
-
   const {
     history,
     location: { pathname },
   } = props;
 
   const pathnames = pathname.split("/").filter((x: any) => x);
-  const pathLength = pathnames.slice(2, pathnames.length)
+  const pathLength = pathnames.slice(2, pathnames.length);
 
   return (
     <>

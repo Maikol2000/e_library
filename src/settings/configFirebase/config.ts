@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getStorage, ref, uploadBytesResumable } from "firebase/storage";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 // Your web app's Firebase configuration
@@ -16,8 +17,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const stores = getFirestore();
+export const storage = getStorage();
 export const auth = getAuth();
 
 export const login = (email: any, pass: any) => {
-  return signInWithEmailAndPassword(auth, email, pass)
-}
+  return signInWithEmailAndPassword(auth, email, pass);
+};

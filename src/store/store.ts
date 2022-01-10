@@ -8,17 +8,19 @@ import thunk from "redux-thunk";
 import { dsLichXuDungTaiLieuReducer } from "../container/leaderComponent/homeLeader/moduleLichXuDungTaiLieu/reducer";
 import dsTepRiengTuReducer from "../container/leaderComponent/homeLeader/moduleTepRiengTu/reducer";
 import { authReduser } from "../container/share/auth/login/module/reducer";
+import { avatarRduer } from "../container/trangCaNhan/thongTinCaNhan/modelChangeImg/module/reducer";
 
 const rootReducer = combineReducers({
   dsLichXuDungTaiLieuReducer,
   dsTepRiengTuReducer,
   authReduser,
+  avatarRduer
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["authReduser"],
+  whitelist: ["authReduser", "avatarRduer"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
