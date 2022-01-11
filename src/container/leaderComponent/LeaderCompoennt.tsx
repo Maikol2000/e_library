@@ -13,6 +13,7 @@ import ThongBao from "./thongBao/ThongBao";
 import MonHocDetail from "./quanLyMon/danhSachMon/monHocDetail/monHocDetail";
 import XemMonHoc from "./quanLyMon/danhSachMon/xemMonHoc/XemMonHoc";
 import TrangCaNhan from "../trangCaNhan/TrangCaNhan";
+import DanhSachTaiLieuMon from "./quanLyMon/danhSachMon/danhSachTaiLieuMon/DanhSachTaiLieuMon";
 
 export default function LeaderCompoennt() {
   return (
@@ -23,6 +24,7 @@ export default function LeaderCompoennt() {
           path="/page-leader/Quảng lý học viên/Danh sách môn học"
           component={DanhSachMon}
         />
+        <Route path="/page-leader/Trang Chủ/Quản lý môn/Danh sách tài liệu" component={DanhSachTaiLieuMon} />
         <Route path="/page-leader/Danh sách môn học/:id" component={XemMonHoc} />
         <Route
           exact

@@ -1,0 +1,85 @@
+.form_change_pass {
+  width: 65%;
+}
+.warn_change_pass {
+  width: 30%;
+}
+
+.custom_form_form_change_info {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.custom_form_form_change_info label {
+  width: 13rem;
+}
+
+.custom_form_form_change_info input {
+  width: 872px;
+  height: 40px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  color: var(--Orange-7);
+  font-size: 24px;
+}
+
+.icon_eye_form_change_info {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.btn_huy_luu_pass {
+  text-align: right;
+}
+
+.btn_huy_luu_pass button {
+  width: 160px;
+  height: 52px;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+}
+
+.btn_huy_luu_pass button:first-child {
+  color: black;
+}
+
+.btn_huy_luu_pass button:last-child {
+  background-color: var(--Orange-4);
+  margin-left: 2rem;
+}
+
+.warn_change_pass p {
+  margin-bottom: -1px;
+  color: var(--Orange-7);
+}
+
+.list_text_warn {
+  margin-left: 30px;
+}
+
+/*responsive*/
+@media screen and (max-width: 800px) {
+  .custom_form_form_change_info {
+    display: block;
+  }
+  .custom_form_form_change_info input {
+    width: 100%;
+  }
+  .icon_eye_form_change_info {
+    top: 52%;
+    right: 8px;
+  }
+  .form_change_pass,
+  .warn_change_pass {
+    margin: auto;
+    width: 90%;
+  }
+  .btn_huy_luu_pass button:last-child {
+    margin: 0;
+  }
+}

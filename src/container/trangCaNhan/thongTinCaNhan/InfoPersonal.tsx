@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 
 //img
@@ -8,13 +8,28 @@ import ModelChangeImg from "./modelChangeImg/ModelChangeImg";
 import { RootState } from "../../../store/store";
 import { useSelector } from "react-redux";
 import Loading from "../../share/loading/Loading";
+import SnackbarSuccess from "../../share/snackbar/SnackbarSuccess";
 
 export default function InfoPersonal() {
-  const {avatar, loading} = useSelector((state: RootState) => state.avatarRduer);
+  const [toast, settoast] = useState(false);
+
+  const { avatar, loading } = useSelector(
+    (state: RootState) => state.avatarRduer
+  );
+
+  const currentUser = useSelector(
+    (state: RootState) => state.authReduser.currentUser
+  );
+
+  useEffect(() => {
+    if (loading) settoast(true);
+    if (!loading) settoast(false);
+  }, [loading]);
 
   return (
-    <div>
+    <>
       {loading && <Loading />}
+      {toast && <SnackbarSuccess />}
       <section className="thong_tin_chung">Thông tin chung</section>
       <div className="form_change_info">
         <div className="change_img_before_after">
@@ -33,7 +48,7 @@ export default function InfoPersonal() {
             data-toggle="modal"
             data-target="#staticBackdrop"
           />
-          <ModelChangeImg/>
+          <ModelChangeImg />
         </div>
         <form className="form_thong_tin_chung">
           <div className="form_thong_tin_chung_left">
@@ -43,6 +58,7 @@ export default function InfoPersonal() {
                 type="text"
                 className="form-control"
                 aria-describedby="emailHelp"
+                defaultValue="CH-121"
               />
             </div>
             <div className="form-group form_group_custom_thong_tin_chung_select">
@@ -60,7 +76,7 @@ export default function InfoPersonal() {
               <input
                 type="text"
                 className="form-control"
-                aria-describedby="emailHelp"
+                defaultValue="Quản lý"
               />
             </div>
             <div className="form-group form_group_custom_thong_tin_chung">
@@ -68,29 +84,38 @@ export default function InfoPersonal() {
               <input
                 type="email"
                 className="form-control"
-                aria-describedby="emailHelp"
+                defaultValue={currentUser}
               />
             </div>
           </div>
           <div className="form_thong_tin_chung_right">
             <div className="form-group form_group_custom_thong_tin_chung">
               <label>Tên người dùng: </label>
-              <input type="text" className="form-control" />
+              <input
+                type="text"
+                className="form-control"
+                defaultValue="Lê Cường"
+              />
             </div>
             <div className="form-group form_group_custom_thong_tin_chung">
               <label>Số điện thoại: </label>
-              <input type="tel" className="form-control" />
+              <input
+                type="tel"
+                className="form-control"
+                defaultValue="0245544648"
+              />
             </div>
             <div className="form-group form_group_custom_thong_tin_chung custom-text-form-for-address">
               <label>Địa chỉ: </label>
               <textarea
                 className="form-control"
                 id="custom-text-form-for-address-input"
+                defaultValue="36/63,dĩ an"
               />
             </div>
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 }

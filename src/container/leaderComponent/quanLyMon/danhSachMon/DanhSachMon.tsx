@@ -19,7 +19,7 @@ import {
   Paper,
 } from "@mui/material";
 //action
-
+import { actDanhSachTepriengTu } from "../../homeLeader/moduleTepRiengTu/action";
 //type root
 import { RootState } from "../../../../store/store";
 //Paginate
@@ -31,8 +31,8 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+
 import SelectNienKhoa from "../../../share/selectNienKhoa/SelectNienKhoa";
-import { actDanhSachTepriengTu } from "../../homeLeader/moduleTepRiengTu/action";
 import Loading from "../../../share/loading/Loading";
 
 export default function DanhSachMon() {
@@ -42,10 +42,9 @@ export default function DanhSachMon() {
     dispatch(actDanhSachTepriengTu());
   }, []);
 
-  const {danhSachTepRiengTuDaTaiLenGanDay, loading} = useSelector(
-    (state: RootState) =>
-      state.dsTepRiengTuReducer
-  )
+  const { danhSachTepRiengTuDaTaiLenGanDay, loading } = useSelector(
+    (state: RootState) => state.dsTepRiengTuReducer
+  );
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -96,7 +95,7 @@ export default function DanhSachMon() {
 
   return (
     <>
-    {loading && <Loading />}
+      {loading && <Loading />}
       <section className="danh_sach_mon_nien_khoa">
         <SelectNienKhoa />
       </section>
@@ -181,67 +180,79 @@ export default function DanhSachMon() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {filteredDocs?.slice(pagesVisited, pagesVisited + docsPerPage)?.map(
-                (
-                  row: {
-                    giangVien: any;
-                    maMonHoc: any;
-                    ngayGui: any;
-                    taiLieuChoSd: any;
-                    tenMonHoc: any;
-                    tinhTrangTaiLieuMon: any;
-                  },
-                  index: React.Key | null | undefined
-                ) => {
-                  const {
-                    giangVien,
-                    maMonHoc,
-                    ngayGui,
-                    taiLieuChoSd,
-                    tenMonHoc,
-                    tinhTrangTaiLieuMon,
-                  } = row;
-                  return (
-                    <StyledTableRow key={index}>
-                      <StyledTableCell component="th" scope="row">
-                        {maMonHoc}
-                      </StyledTableCell>
-                      <StyledTableCell
-                        style={{ cursor: "pointer" }}
-                        component="th"
-                        scope="row"
-                        onClick={() =>
-                          history.push({
-                            pathname: `/page-leader/Quảng lý học viên/${tenMonHoc}`,
-                            state: row,
-                          })
-                        }
-                      >
-                        {tenMonHoc}
-                      </StyledTableCell>
-                      <StyledTableCell component="th" scope="row">
-                        {giangVien}
-                      </StyledTableCell>
-                      <StyledTableCell component="th" scope="row">
-                        {taiLieuChoSd}
-                      </StyledTableCell>
-                      <StyledTableCell component="th" scope="row">
-                        {tinhTrangTaiLieuMon ? (
-                          <span className="daPheDuyet">Đã phê duyệt</span>
-                        ) : (
-                          <span className="choPheDuyet">Chờ xét duyệt</span>
-                        )}
-                      </StyledTableCell>
-                      <StyledTableCell component="th" scope="row">
-                        {ngayGui}
-                      </StyledTableCell>
-                      <StyledTableCell component="th" scope="row">
-                        <img src={list_danh_sach_mon_hoc} alt="..." />
-                      </StyledTableCell>
-                    </StyledTableRow>
-                  );
-                }
-              )}
+              {filteredDocs
+                ?.slice(pagesVisited, pagesVisited + docsPerPage)
+                ?.map(
+                  (
+                    row: {
+                      giangVien: any;
+                      maMonHoc: any;
+                      ngayGui: any;
+                      taiLieuChoSd: any;
+                      tenMonHoc: any;
+                      tinhTrangTaiLieuMon: any;
+                    },
+                    index: React.Key | null | undefined
+                  ) => {
+                    const {
+                      giangVien,
+                      maMonHoc,
+                      ngayGui,
+                      taiLieuChoSd,
+                      tenMonHoc,
+                      tinhTrangTaiLieuMon,
+                    } = row;
+                    return (
+                      <StyledTableRow key={index}>
+                        <StyledTableCell component="th" scope="row">
+                          {maMonHoc}
+                        </StyledTableCell>
+                        <StyledTableCell
+                          style={{ cursor: "pointer" }}
+                          component="th"
+                          scope="row"
+                          onClick={() =>
+                            history.push({
+                              pathname: `/page-leader/Quảng lý học viên/${tenMonHoc}`,
+                              state: row,
+                            })
+                          }
+                        >
+                          {tenMonHoc}
+                        </StyledTableCell>
+                        <StyledTableCell component="th" scope="row">
+                          {giangVien}
+                        </StyledTableCell>
+                        <StyledTableCell component="th" scope="row">
+                          {taiLieuChoSd}
+                        </StyledTableCell>
+                        <StyledTableCell component="th" scope="row">
+                          {tinhTrangTaiLieuMon ? (
+                            <span className="daPheDuyet">Đã phê duyệt</span>
+                          ) : (
+                            <span className="choPheDuyet">Chờ xét duyệt</span>
+                          )}
+                        </StyledTableCell>
+                        <StyledTableCell component="th" scope="row">
+                          {ngayGui}
+                        </StyledTableCell>
+                        <StyledTableCell component="th" scope="row">
+                          <img
+                            style={{ cursor: "pointer" }}
+                            src={list_danh_sach_mon_hoc}
+                            alt="..."
+                            onClick={() =>
+                              history.push({
+                                pathname: `/page-leader/Trang Chủ/Quản lý môn/Danh sách tài liệu`,
+                                state: tenMonHoc,
+                              })
+                            }
+                          />
+                        </StyledTableCell>
+                      </StyledTableRow>
+                    );
+                  }
+                )}
             </TableBody>
           </Table>
         </TableContainer>
