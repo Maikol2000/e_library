@@ -19,7 +19,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 export default function NavBarNavBarForLeader() {
   const [dropMenu, setdropMenu] = useState(false);
   const [nav, setnav] = useState(false);
-  const [scroll, setScroll] = useState(false)
+  const [scroll, setScroll] = useState(false);
 
   const drop = () => {
     setdropMenu(!dropMenu);
@@ -36,21 +36,19 @@ export default function NavBarNavBarForLeader() {
 
   const onChangeNav = () => {
     if (window.scrollY > 100) {
-      setScroll(true)
+      setScroll(true);
     } else {
-      setScroll(false)
+      setScroll(false);
     }
   };
 
   window.addEventListener("scroll", onChangeNav);
 
-  useEffect(() => {
-    if (window.scrollY > 100) {
-      navBar?.classList.toggle("scrollNav");
-    } else {
-      navBar?.classList.remove("scrollNav");
-    }
-  }, [window.scrollY]);
+  if (window.scrollY > 100) {
+    navBar?.classList.toggle("scrollNav");
+  } else {
+    navBar?.classList.remove("scrollNav");
+  }
 
   return (
     <>

@@ -1,0 +1,70 @@
+.danhSachTaiLieuMonHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.danhSachTaiLieuMonHeadRight {
+  display: flex;
+}
+
+.imgDSTLMRight {
+  width: 4rem;
+  text-align: center;
+  border-right: 1px solid var(--Icon-silver);
+  line-height: 50px;
+}
+
+.btnDSTLMRight button {
+  width: 160px;
+  height: 52px;
+  background: var(--Icon-silver);
+  border-radius: 8px;
+  margin: 0px 16px;
+  border: none;
+}
+
+.btnDSTLMRight button:first-child {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: var(--Icon-silver);
+  background-color: white;
+  border: var(--Icon-silver) solid 1px;
+}
+
+.btnDSTLMRight button:last-child {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: white;
+}
+
+/*custom  bg*/
+.danhSachTaiLieuMonTable {
+  width: 100%;
+  height: 601px;
+  background: #ffffff;
+  box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+  border-radius: 16px;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+/*end custom  bg*/
+
+/*custom table head*/
+.danhSachTaiLieuMonTableHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ds_tai_lieu_custom_input {
+  width: 25rem;
+}
+
+.ds_tai_lieu_custom_input input {
+  padding-left: 50px;
+}
+
+/*end custom table head*/

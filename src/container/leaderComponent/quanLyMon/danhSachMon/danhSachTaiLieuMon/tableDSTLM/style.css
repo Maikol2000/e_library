@@ -1,0 +1,62 @@
+.head_table_DSTLM {
+  background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
+  border: 1px solid #f2f2f2;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.css-rorn0c-MuiTableContainer-root {
+  border-radius: 8px;
+}
+
+td.css-177gid-MuiTableCell-root {
+  text-align: left;
+}
+
+svg.css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon,
+.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active
+  .MuiTableSortLabel-icon,
+th:last-of-type
+  span.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active,
+th:last-of-type span.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root {
+  display: none;
+}
+
+span.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root,
+span.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root.Mui-active,
+span.css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root:hover {
+  color: white;
+}
+
+.text_table_1_dstml {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #7c7c7c;
+}
+
+.custom_btn_table_dstlm_1 {
+  width: 113px;
+  height: 32px;
+  background: var(--Orange-4);
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+}
+
+.custom_btn_table_dstlm_2 {
+  width: 69px;
+  height: 36px;
+  background: var(--Icon-silver);
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.015em;
+  color: #ffffff;
+}

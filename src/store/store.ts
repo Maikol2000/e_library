@@ -9,12 +9,14 @@ import { dsLichXuDungTaiLieuReducer } from "../container/leaderComponent/homeLea
 import dsTepRiengTuReducer from "../container/leaderComponent/homeLeader/moduleTepRiengTu/reducer";
 import { authReduser } from "../container/share/auth/login/module/reducer";
 import { avatarRduer } from "../container/trangCaNhan/thongTinCaNhan/modelChangeImg/module/reducer";
+import { dsTaiLieuMonReducer } from "../container/leaderComponent/quanLyMon/danhSachMon/danhSachTaiLieuMon/tableDSTLM/module/reducer";
 
 const rootReducer = combineReducers({
   dsLichXuDungTaiLieuReducer,
   dsTepRiengTuReducer,
   authReduser,
-  avatarRduer
+  avatarRduer,
+  dsTaiLieuMonReducer,
 });
 
 const persistConfig = {

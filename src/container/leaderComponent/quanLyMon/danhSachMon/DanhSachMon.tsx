@@ -24,6 +24,7 @@ import { actDanhSachTepriengTu } from "../../homeLeader/moduleTepRiengTu/action"
 import { RootState } from "../../../../store/store";
 //Paginate
 import ReactPaginate from "react-paginate";
+
 import { useHistory } from "react-router-dom";
 //font awesome
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
@@ -162,7 +163,7 @@ export default function DanhSachMon() {
         </section>
         <TableContainer component={Paper}>
           <Table aria-label="customized table">
-            <TableHead>
+            <TableHead className="header_table_DSM">
               <TableRow>
                 <StyledTableCell>Mã môn học</StyledTableCell>
                 <StyledTableCell align="right">Tên môn học</StyledTableCell>
@@ -279,7 +280,7 @@ export default function DanhSachMon() {
             disabledClassName={"disablePaginateDSM"}
             activeClassName={"activePaginateDSM"}
           />
-        </section>{" "}
+        </section>
       </section>
     </>
   );

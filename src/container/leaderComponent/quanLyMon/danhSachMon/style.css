@@ -78,7 +78,7 @@
 
 /* custom table */
 
-.css-1q1u3t4-MuiTableRow-root {
+.header_table_DSM {
   background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
 }
 
@@ -86,8 +86,9 @@
   text-align: left;
 }
 
-.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+div.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
   height: 20.5rem;
+  border-radius: 8px 8px 0 0;
 }
 /* end custom table */
 

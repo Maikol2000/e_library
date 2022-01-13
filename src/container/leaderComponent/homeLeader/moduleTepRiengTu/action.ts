@@ -1,5 +1,5 @@
 //firebase
-import { collection, getDocs, onSnapshot } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import {stores} from "../../../../settings/configFirebase/config";
 
 import {
