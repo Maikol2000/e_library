@@ -1,0 +1,21 @@
+tr.tb_heade_tep_rieng_tu {
+  background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
+  border-radius: 8px 8px 0px 0px;
+}
+
+th.css-1wvnaxz-MuiTableCell-root.MuiTableCell-head,
+th.css-1nslmh4-MuiTableCell-root.MuiTableCell-head {
+  background: none;
+}
+
+.css-1bhpkcd-MuiTableCell-root.MuiTableCell-body {
+  text-align: left;
+}
+
+.btn_huy_modal_tep_rieng {
+  width: 128px;
+  height: 52px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+}

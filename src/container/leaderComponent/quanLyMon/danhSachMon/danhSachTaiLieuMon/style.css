@@ -68,3 +68,36 @@
 }
 
 /*end custom table head*/
+
+/*responsive*/
+
+@media screen and (max-width:800px) {
+  .danhSachTaiLieuMonHead {
+    margin-top: 2rem;
+    align-items: flex-start
+  }
+  .danhSachTaiLieuMonHeadRight {
+    width: 44%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .danhSachTaiLieuMonTableHeader {
+    flex-direction: column;
+  }
+  .ds_tai_lieu_custom_input {
+    width: 100%;
+  }
+  .danhSachTaiLieuMonHead {
+    flex-direction: column;
+  }
+  .danhSachTaiLieuMonHeadRight {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and(max-width: 480px) {
+  .danhSachTaiLieuMonTable {
+    padding: 1rem;
+  }
+}

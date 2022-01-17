@@ -10,6 +10,7 @@ import dsTepRiengTuReducer from "../container/leaderComponent/homeLeader/moduleT
 import { authReduser } from "../container/share/auth/login/module/reducer";
 import { avatarRduer } from "../container/trangCaNhan/thongTinCaNhan/modelChangeImg/module/reducer";
 import { dsTaiLieuMonReducer } from "../container/leaderComponent/quanLyMon/danhSachMon/danhSachTaiLieuMon/tableDSTLM/module/reducer";
+import {allFileReducer} from "../container/leaderComponent/tepRiengTu/tableTepRiengTu/module/reducer"
 
 const rootReducer = combineReducers({
   dsLichXuDungTaiLieuReducer,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   authReduser,
   avatarRduer,
   dsTaiLieuMonReducer,
+  allFileReducer
 });
 
 const persistConfig = {

@@ -1,0 +1,190 @@
+/*custom modal phe duyet*/
+.custom_modal_phe_duyet {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  height: 13rem;
+  padding: 1rem;
+}
+
+.custom_title_modal_phe_duyet {
+  font-size: 28px;
+  color: var(--Orange-7);
+}
+
+.custom_text_modal_phe_duyet {
+  color: var(--Orange-7);
+}
+
+.custom_btn_modal_phe_duyet {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.custom_btn_modal_phe_duyet button:first-of-type {
+  background: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+  width: 160px;
+  height: 52px;
+}
+
+.custom_btn_modal_phe_duyet button:last-of-type {
+  background: var(--Orange-4);
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: white;
+  width: 160px;
+  height: 52px;
+}
+/*end custom modal phe duyet*/
+
+/*custom model huy*/
+.custom_model_huy {
+  height: 380px;
+  padding: 1rem;
+}
+
+.custom_model_huy h5 {
+  font-size: 28px;
+  line-height: 33px;
+  color: var(--Orange-7);
+  text-align: center;
+}
+
+.custom_modal_huy_line {
+  margin: 1rem 0;
+  display: flex;
+}
+
+.custom_modal_huy_line span {
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+  font-weight: 700;
+  width: 10rem;
+  display: inline-block;
+}
+
+.custom_modal_huy_line span i {
+  color: red;
+}
+
+.custom_modal_huy_ip_date {
+  width: 180px;
+  height: 32px;
+  border: 1px solid var(--Icon-silver);
+  border-radius: 4px;
+  background: url(../../../../../../assets/img/u_calendar-alt.png) no-repeat
+    9rem;
+  padding: 8px;
+}
+
+.custom_modal_huy_ip_date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.custom_modal_huy_ip_text {
+  width: 180px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid var(--Icon-silver);
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--Orange-7);
+  padding: 1rem;
+}
+
+.custom_modal_huy_ip_text_area {
+  width: 561px;
+  height: 105px;
+  padding: 0.5rem;
+}
+
+.custom_btn_huy {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: auto;
+}
+
+.custom_btn_huy button:first-of-type {
+  background: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+  width: 160px;
+  height: 52px;
+  font-weight: 700;
+}
+
+.custom_btn_huy button:last-of-type {
+  background: var(--Icon-silver);
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: white;
+  width: 160px;
+  height: 52px;
+  transition: all 0.1s linear;
+}
+
+.custom_btn_huy button:last-of-type.custom_active_btn_huy {
+  transition: all 0.1s linear;
+  background: var(--Orange-4);
+}
+
+/*end custom model huy*/
+
+/*custom modal poppup bài giảng*/
+
+div.bg_video_bai_giang {
+  background: #e5e5e5;
+  height: 35rem;
+}
+div.modal_body_bai_giang {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  text-align: center;
+}
+/*end custom modal poppup bài giảng*/
+
+/*custom modal poppup tài nguyên*/
+.title_modal_body_tai_nguyen {
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--Orange-7);
+  text-align: center;
+  margin-top: -3rem;
+}
+.text_line_one_modal_body_tai_nguyen span,
+.text_line_two_modal_body_tai_nguyen span {
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--Orange-5);
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.text_line_one_modal_body_tai_nguyen p,
+.text_line_two_modal_body_tai_nguyen p {
+  color: var(--Orange-7);
+}
+/*end custom modal poppup tài nguyên*/
+.custom_X_close {
+  text-align: right;
+  color: var(--Orange-6);
+  font-size: 3rem;
+  margin-top: -28px;
+  cursor: pointer;
+  z-index: 1;
+}

@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 
-import u_arrow_up_down from "../../../../../../assets/img/u_arrow_up_down.png";
-import u_eye from "../../../../../../assets/img/u_eye.png";
+import u_arrow_up_down from "../../../../assets/img/u_arrow_up_down.png";
+import more_vertical from "../../../../assets/img/more_vertical.png";
+import file_1 from "../../../../assets/img/file-1.png";
+import file_2 from "../../../../assets/img/file-2.png";
+import file_3 from "../../../../assets/img/file-3.png";
+import file_4 from "../../../../assets/img/file-4.png";
+import file_5 from "../../../../assets/img/File-5.png";
 
 import ReactPaginate from "react-paginate";
 
@@ -18,21 +23,19 @@ import {
   Paper,
   Checkbox,
 } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { actDanhSachTaiLieu } from "./module/action";
-import { RootState } from "../../../../../../store/store";
-import Loading from "../../../../../share/loading/Loading";
-import DanhSachTaiLieuMon from "../DanhSachTaiLieuMon";
+import Loading from "../../../share/loading/Loading";
+import PoppupBaiGiang from "../../quanLyMon/danhSachMon/danhSachTaiLieuMon/xuLyPoppup/PoppupBaiGiang";
+import PoppupTaiNguyen from "../../quanLyMon/danhSachMon/danhSachTaiLieuMon/xuLyPoppup/PoppupTaiNguyen";
+import ModalDoiTen from "./modal/ModalDoiTen";
+import ModalXoa from "./modal/ModalXoa";
 
 interface Data {
-  id: any;
-  tenTaiLieu: string;
-  phanLoai: boolean;
-  giangVien: string;
-  ngayGui: string;
-  tinhTrang: number;
-  pheDuyetTaiLieu: any;
-  eye: any;
+  loai: string;
+  ten: string;
+  nguoiChinhSua: string;
+  lastUpdate: string;
+  size: number;
+  vertical: any;
 }
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -46,18 +49,6 @@ function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
 }
 
 type Order = "asc" | "desc";
-
-function getComparator<Key extends keyof any>(
-  order: Order,
-  orderBy: Key
-): (
-  a: { [key in Key]: number | string },
-  b: { [key in Key]: number | string }
-) => number {
-  return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
-}
 
 function stableSort<T>(
   array: readonly T[],
@@ -83,43 +74,37 @@ interface HeadCell {
 
 const headCells: readonly HeadCell[] = [
   {
-    id: "tenTaiLieu",
+    id: "loai",
     numeric: false,
     disablePadding: false,
-    label: "Tên tài liệu",
+    label: "Loại tài liệu",
   },
   {
-    id: "phanLoai",
-    numeric: true,
+    id: "ten",
+    numeric: false,
     disablePadding: false,
-    label: "Phân loại",
+    label: "Tên",
   },
   {
-    id: "giangVien",
+    id: "nguoiChinhSua",
     numeric: true,
     disablePadding: false,
     label: "Giảng viên",
   },
   {
-    id: "ngayGui",
+    id: "lastUpdate",
     numeric: true,
     disablePadding: false,
     label: "Ngày gửi",
   },
   {
-    id: "tinhTrang",
+    id: "size",
     numeric: true,
     disablePadding: false,
     label: "Tình trạng",
   },
   {
-    id: "pheDuyetTaiLieu",
-    numeric: true,
-    disablePadding: false,
-    label: "Phép duyệt tài liệu",
-  },
-  {
-    id: "eye",
+    id: "vertical",
     numeric: true,
     disablePadding: false,
     label: " ",
@@ -189,14 +174,18 @@ function EnhancedTableHead(props: EnhancedTableProps) {
 }
 
 type Props = {
-  search: string,
-  dsTaiLieuMonReducer: any
-  loading:boolean
-}
+  allFilePrivate: any;
+  loading: boolean;
+  search: string;
+};
 
-export default function EnhancedTable({dsTaiLieuMonReducer,search, loading}:Props) {
+export default function TableRepRiengTu({
+  allFilePrivate,
+  loading,
+  search,
+}: Props) {
   const [order, setOrder] = React.useState<Order>("asc");
-  const [orderBy, setOrderBy] = React.useState<keyof Data>("tenTaiLieu");
+  const [orderBy, setOrderBy] = React.useState<keyof Data>("loai");
   const [selected, setSelected] = React.useState<readonly string[]>([]);
 
   const handleRequestSort = (
@@ -210,7 +199,7 @@ export default function EnhancedTable({dsTaiLieuMonReducer,search, loading}:Prop
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelecteds = dsTaiLieuMonReducer?.map((n: { id: any }) => n.id);
+      const newSelecteds = allFilePrivate?.map((n: { id: any }) => n.id);
       setSelected(newSelecteds);
       return;
     }
@@ -247,23 +236,40 @@ export default function EnhancedTable({dsTaiLieuMonReducer,search, loading}:Prop
 
   const docsPerPage = perPage;
   const pagesVisited = pageNumber * docsPerPage;
-  const pageCount = Math.ceil(dsTaiLieuMonReducer?.length / docsPerPage);
+  const pageCount = Math.ceil(allFilePrivate?.length / docsPerPage);
   const changePage = ({ selected }: any) => {
     setPageNumber(selected);
   };
 
   //filter input table
-  const filteredDocs = dsTaiLieuMonReducer?.filter((docs: any) => {
+  const filteredDocs = allFilePrivate?.filter((docs: any) => {
     if (search) {
-      return docs.giangVien.toLowerCase().indexOf(search.toLowerCase()) != -1;
+      return (
+        docs.nguoiChinhSua.toLowerCase().indexOf(search.toLowerCase()) != -1
+      );
     } else {
-      return dsTaiLieuMonReducer;
+      return allFilePrivate;
     }
   });
+
+  const onChangeShow = (e: any) => {
+    const show = document.querySelectorAll(".list_group_show_action");
+    show[e.target.className]?.classList.toggle("actionShow");
+  };
+
+  const [name, setname] = useState<string | null | undefined>();
+
+  const onChangeName = (e: string) => {
+    setname(e);
+  };
 
   return (
     <>
       {loading && <Loading />}
+      <PoppupBaiGiang />
+      <PoppupTaiNguyen state={""} />
+      <ModalDoiTen name={name} />
+      <ModalXoa />
       <Box sx={{ width: "100%" }}>
         <Paper>
           <TableContainer>
@@ -282,21 +288,16 @@ export default function EnhancedTable({dsTaiLieuMonReducer,search, loading}:Prop
                   .map(
                     (
                       row: {
-                        tenTaiLieu: any;
-                        phanLoai: any;
-                        giangVien: any;
-                        ngayGui: any;
-                        tinhTrang: any;
+                        loai: any;
+                        ten: any;
+                        nguoiChinhSua: any;
+                        lastUpdate: any;
+                        size: any;
                       },
                       index: React.Key | null | undefined
                     ) => {
-                      const {
-                        tenTaiLieu,
-                        phanLoai,
-                        giangVien,
-                        ngayGui,
-                        tinhTrang,
-                      } = row;
+                      const { loai, ten, nguoiChinhSua, lastUpdate, size } =
+                        row;
                       const isItemSelected = isSelected(index);
                       const labelId = `enhanced-table-checkbox-${index}`;
 
@@ -320,53 +321,68 @@ export default function EnhancedTable({dsTaiLieuMonReducer,search, loading}:Prop
                             />
                           </TableCell>
                           <TableCell component="th" align="right" id={labelId}>
-                            {tenTaiLieu}
-                          </TableCell>
-                          <TableCell align="right">
-                            {phanLoai ? <p>Bài giảng</p> : <p>Tài nguyên</p>}
-                          </TableCell>
-                          <TableCell align="right">{giangVien}</TableCell>
-                          <TableCell align="right">{ngayGui}</TableCell>
-                          <TableCell align="right">{tinhTrang}</TableCell>
-                          <TableCell align="right">
-                            {tinhTrang == 1 && (
-                              <p className="text_table_1_dstml">Đã phê duyệt</p>
+                            {loai == "doc" && (
+                              <img
+                                src={file_1}
+                                alt="..."
+                                className="img_table_rieng_tu"
+                              />
                             )}
-                            {tinhTrang == 2 && (
-                              <div>
-                                <button
-                                  className="custom_btn_table_dstlm_1"
-                                  data-toggle="modal"
-                                  data-target="#modalPheDuyet"
-                                >
-                                  Phê duyệt
-                                </button>{" "}
-                                {"   "}
-                                <button
-                                  className="custom_btn_table_dstlm_2"
-                                  data-toggle="modal"
-                                  data-target="#model_huy"
-                                >
-                                  Hủy
-                                </button>
-                              </div>
+                            {loai == "pptx" && (
+                              <img
+                                src={file_2}
+                                alt="..."
+                                className="img_table_rieng_tu"
+                              />
                             )}
-                            {tinhTrang == 3 && (
-                              <p className="text_table_1_dstml">Đã hủy</p>
+                            {loai == "xlsx" && (
+                              <img
+                                src={file_3}
+                                alt="..."
+                                className="img_table_rieng_tu"
+                              />
+                            )}
+                            {loai == "mp4" && (
+                              <img
+                                src={file_5}
+                                alt="..."
+                                className="img_table_rieng_tu"
+                              />
                             )}
                           </TableCell>
+                          <TableCell align="right">{ten}</TableCell>
+                          <TableCell align="right">{nguoiChinhSua}</TableCell>
+                          <TableCell align="right">{lastUpdate}</TableCell>
+                          <TableCell align="right">{size}</TableCell>
                           <TableCell align="right">
                             <img
                               style={{ cursor: "pointer" }}
-                              src={u_eye}
+                              src={more_vertical}
                               alt="..."
-                              data-toggle="modal"
-                              data-target={
-                                phanLoai
-                                  ? "#modal_bai_giang"
-                                  : "#modal_tai_nguyen"
-                              }
+                              onClick={(e) => onChangeShow(e)}
+                              className={`${index}`}
                             />
+                            <div className="list_group_show_action">
+                              <p
+                                data-toggle="modal"
+                                data-target={
+                                  loai == "mp4"
+                                    ? "#modal_tai_nguyen"
+                                    : "#modal_bai_giang"
+                                }
+                              >
+                                Xem trước
+                              </p>
+                              <p
+                                data-toggle="modal"
+                                data-target="#modal_doi_ten"
+                                onClick={() => onChangeName(ten)}
+                              >
+                                Đổi tên
+                              </p>
+                              <p>Tải xuống</p>
+                              <p data-toggle="modal" data-target="#modal_xoa">Xóa</p>
+                            </div>
                           </TableCell>
                         </TableRow>
                       );

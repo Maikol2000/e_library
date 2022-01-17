@@ -1,0 +1,100 @@
+.tep_rieng_tu_line_1 {
+  text-align: right;
+}
+
+.img_down_tep_rieng_tu {
+  display: inline-block;
+  margin-right: 1rem;
+  padding-right: 1rem;
+  border-right: solid 1px var(--Icon-silver);
+}
+
+.btn_up_load_dang_tai {
+  width: 160px;
+  height: 52px;
+  background: var(--Orange-4);
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+}
+
+.tep_rieng_tu_line_2 {
+  width: 100%;
+  height: 408px;
+  box-shadow: 4px 4px 25px 4px rgb(154 202 245 / 25%);
+  border-radius: 16px;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.select_the_loai_one {
+  border-radius: 4px;
+  padding-left: 7px;
+  font-size: 15px;
+  margin-bottom: 3rem;
+  background: #ffffff00;
+  border: 1px solid var(--Orange-7);
+  font-size: 15px;
+  height: 32px;
+  margin-bottom: 3rem;
+  width: 7rem;
+}
+
+.tep_rieng_tu_line_2_selc_input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_tep_rieng_tu {
+  position: relative;
+  width: 40%;
+}
+
+.input_tep_rieng_tu input {
+  background: #f0f3f6;
+  border-radius: 24px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding-left: 3rem;
+}
+
+.input_tep_rieng_tu img {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+
+.list_group_show_action {
+  height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+  border-radius: 8px;
+  transition: all 0.2s linear;
+  position: absolute;
+}
+
+.list_group_show_action p {
+  color: var(--Orange-7);
+  border-bottom: solid 1px var(--Orange-5);
+  cursor: pointer;
+}
+
+.list_group_show_action p:last-of-type {
+  border: none;
+}
+
+.list_group_show_action p:hover {
+  color: #373839;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.actionShow {
+  height: 144px;
+  width: 133px;
+  transition: all 0.2s linear;
+  padding: 10px;
+  z-index: 20;
+}
