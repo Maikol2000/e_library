@@ -98,3 +98,27 @@
   padding: 10px;
   z-index: 20;
 }
+
+/* responsive */
+@media screen and (max-width: 1024px) {
+  .list_group_show_action {
+    right: 77px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tep_rieng_tu_line_1 {
+    text-align: left;
+    margin: 1rem 0;
+  }
+  .tep_rieng_tu_line_2_selc_input {
+    flex-direction: column;
+  }
+  .input_tep_rieng_tu {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .tep_rieng_tu_line_2 {
+    height: 500px;
+  }
+}

@@ -13,11 +13,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 65px;
 }
 
 .danh_sach_mon_list_tab {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .danh_sach_mon_nien_khoa {

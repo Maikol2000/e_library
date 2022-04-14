@@ -19,6 +19,8 @@
 .custom_btn_modal_phe_duyet {
   display: flex;
   justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
 }
 
 .custom_btn_modal_phe_duyet button:first-of-type {
@@ -46,7 +48,7 @@
 
 /*custom model huy*/
 .custom_model_huy {
-  height: 380px;
+  height: 410px;
   padding: 1rem;
 }
 
@@ -79,8 +81,7 @@
   height: 32px;
   border: 1px solid var(--Icon-silver);
   border-radius: 4px;
-  background: url(../../../../../../assets/img/u_calendar-alt.png) no-repeat
-    9rem;
+  background: url(../../assets/img/u_calendar-alt.png) no-repeat 9rem;
   padding: 8px;
 }
 
@@ -141,6 +142,15 @@
   background: var(--Orange-4);
 }
 
+.custom_check_box_huy {
+  margin-left: 9.7rem;
+}
+
+span.css-2tnjwj-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 0;
+  margin-right: .5rem;
+}
+
 /*end custom model huy*/
 
 /*custom modal poppup bài giảng*/
@@ -180,6 +190,83 @@ div.modal_body_bai_giang {
   color: var(--Orange-7);
 }
 /*end custom modal poppup tài nguyên*/
+
+/*modal doi ten*/
+.custom_model_doi_ten {
+  text-align: center;
+  font-size: 28px;
+  margin: 10px 0;
+  letter-spacing: 0.015em;
+  color: #373839;
+  font-weight: 700;
+}
+
+.custom_model_body_doi_ten input {
+  width: 712px;
+  height: 40px;
+  border: 1px solid rgba(55, 56, 57, 0.5);
+  border-radius: 8px;
+  padding-left: 1rem;
+  margin-right: 0.5rem;
+}
+
+.custom_btn_doi_ten {
+  text-align: center;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding: 10px;
+}
+
+.custom_btn_doi_ten button:first-of-type {
+  width: 160px;
+  height: 52px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+  font-weight: 700;
+}
+
+.custom_btn_doi_ten button:last-of-type {
+  width: 160px;
+  height: 52px;
+  background: var(--Icon-silver);
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: white;
+  font-weight: 700;
+}
+
+button:last-of-type.change_text_doi_ten {
+  background: var(--Orange-4);
+}
+/*end modal doi ten*/
+
+/*custom modal xoa*/
+div.modal_content_xoa {
+  width: 85%;
+  margin: auto;
+}
+
+.modal_xoa_title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--Orange-7);
+  margin: 20px 0;
+}
+
+button:last-of-type.btn_xoa {
+  background: var(--Orange-4);
+}
+/*end custom modal xoa*/
+
 .custom_X_close {
   text-align: right;
   color: var(--Orange-6);
@@ -187,4 +274,8 @@ div.modal_body_bai_giang {
   margin-top: -28px;
   cursor: pointer;
   z-index: 1;
+}
+
+.so_tep_NHDT {
+  font-weight: bold;
 }

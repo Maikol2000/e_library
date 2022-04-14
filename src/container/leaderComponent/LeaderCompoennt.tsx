@@ -14,6 +14,7 @@ import MonHocDetail from "./quanLyMon/danhSachMon/monHocDetail/monHocDetail";
 import XemMonHoc from "./quanLyMon/danhSachMon/xemMonHoc/XemMonHoc";
 import TrangCaNhan from "../trangCaNhan/TrangCaNhan";
 import DanhSachTaiLieuMon from "./quanLyMon/danhSachMon/danhSachTaiLieuMon/DanhSachTaiLieuMon";
+import ChiTietDeThi from "./nganHangDeThi/chiTietDeThi/ChiTietDeThi";
 
 export default function LeaderCompoennt() {
   return (
@@ -35,8 +36,9 @@ export default function LeaderCompoennt() {
           path="/page-leader/Quảng lý học viên/:id"
           component={MonHocDetail}
         />
-        <Route path="/page-leader/Tệp riêng tư" component={TepRiengTu} />
-        <Route path="/page-leader/Ngân hàng đề thi" component={NganHangDeThi} />
+        <Route path="/page-leader/Trang chủ/Tệp riêng tư/Tất cả các tệp" component={TepRiengTu} />
+        <Route exact path="/page-leader/Ngân hàng đề thi" component={NganHangDeThi} />
+        <Route path="/page-leader/Ngân hàng đề thi/Chi tiết đề thi" component={ChiTietDeThi} />
         <Route path="/page-leader/Thông báo" component={ThongBao} />
         <Route path="/page-leader/Cài đặt hệ thống" component={CaiDatHeThong} />
         <Route path="/page-leader/Trợ giúp" component={TroGiup} />

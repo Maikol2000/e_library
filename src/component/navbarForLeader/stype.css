@@ -75,14 +75,13 @@
   position: fixed;
   width: 230px;
   height: 100%;
-  left: -138px;
+  left: -145px;
   transition: all 0.4s;
   background: #ffffff;
   box-shadow: 4px 4px 10px rgba(133, 178, 220, 0.25);
   border-radius: 0px;
   z-index: 3;
   transition: all 0.4s;
-  opacity: 0;
 }
 
 .nav__bar:hover .menu {

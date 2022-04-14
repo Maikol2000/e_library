@@ -81,7 +81,7 @@ export default function NavBarNavBarForLeader() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/page-leader/Tệp riêng tư" activeClassName="active">
+              <NavLink to="/page-leader/Trang chủ/Tệp riêng tư/Tất cả các tệp" activeClassName="active">
                 <img src={lock} alt="..." />
               </NavLink>
             </li>
@@ -139,7 +139,7 @@ export default function NavBarNavBarForLeader() {
               </section>
             </li>
             <li className="lock__nav">
-              <NavLink to="/page-leader/Tệp riêng tư" activeClassName="active">
+              <NavLink to="/page-leader/Trang chủ/Tệp riêng tư/Tất cả các tệp" activeClassName="active">
                 Tệp riêng tư
               </NavLink>
             </li>

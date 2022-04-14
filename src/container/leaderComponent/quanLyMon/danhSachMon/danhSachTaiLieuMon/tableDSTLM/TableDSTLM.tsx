@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 import u_arrow_up_down from "../../../../../../assets/img/u_arrow_up_down.png";
@@ -18,11 +18,8 @@ import {
   Paper,
   Checkbox,
 } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { actDanhSachTaiLieu } from "./module/action";
-import { RootState } from "../../../../../../store/store";
+
 import Loading from "../../../../../share/loading/Loading";
-import DanhSachTaiLieuMon from "../DanhSachTaiLieuMon";
 
 interface Data {
   id: any;
@@ -46,18 +43,6 @@ function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
 }
 
 type Order = "asc" | "desc";
-
-function getComparator<Key extends keyof any>(
-  order: Order,
-  orderBy: Key
-): (
-  a: { [key in Key]: number | string },
-  b: { [key in Key]: number | string }
-) => number {
-  return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
-}
 
 function stableSort<T>(
   array: readonly T[],
@@ -189,12 +174,16 @@ function EnhancedTableHead(props: EnhancedTableProps) {
 }
 
 type Props = {
-  search: string,
-  dsTaiLieuMonReducer: any
-  loading:boolean
-}
+  search: string;
+  dsTaiLieuMonReducer: any;
+  loading: boolean;
+};
 
-export default function EnhancedTable({dsTaiLieuMonReducer,search, loading}:Props) {
+export default function EnhancedTable({
+  dsTaiLieuMonReducer,
+  search,
+  loading,
+}: Props) {
   const [order, setOrder] = React.useState<Order>("asc");
   const [orderBy, setOrderBy] = React.useState<keyof Data>("tenTaiLieu");
   const [selected, setSelected] = React.useState<readonly string[]>([]);

@@ -1,0 +1,69 @@
+/*custom line head*/
+.line_head_ctdt,
+.line_head_ctdt_right_around,
+.line_head_ctdt_1,
+.line_head_ctdt_2,
+.line_head_ctdt_3 {
+  display: flex;
+}
+
+.line_head_ctdt {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line_head_ctdt_right_around {
+  width: 60%;
+  justify-content: space-between;
+}
+
+.line_head_ctdt_2,
+.line_head_ctdt_3,
+.line_head_ctdt_1 {
+  width: 33%;
+}
+
+.line_head_ctdt_right {
+  font-weight: bold;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+  padding-right: 10px;
+}
+
+.line_head_ctdt_left_around {
+  width: 31%;
+}
+
+.btn_ctdt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn_ctdt button {
+  border: none;
+}
+
+.btn_ctdt button:first-of-type {
+  width: 178px;
+  height: 52px;
+  background-color: white;
+  border: 1px solid var(--Orange-4);
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: var(--Orange-4);
+}
+
+.btn_ctdt button:last-of-type {
+  width: 178px;
+  height: 52px;
+  background-color: var(--Orange-4);
+  border-radius: 8px;
+
+  font-size: 18px;
+  letter-spacing: 0.015em;
+  color: white;
+}
+/*end custom line head*/

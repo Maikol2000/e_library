@@ -56,20 +56,9 @@ export default function ModalTepRiengTu() {
           role="document"
         >
           <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
+              <h5 className="modal-title modal_title_tep_rieng" id="exampleModalLabel">
                 Thêm tệp
               </h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>
-
             <div className="modal-body">
               <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -110,7 +99,7 @@ export default function ModalTepRiengTu() {
                 </Table>
               </TableContainer>
             </div>
-            <div style={{textAlign:"center"}}>
+            <div style={{ textAlign: "center" }}>
               <button
                 type="button"
                 className="btn_huy_modal_tep_rieng"

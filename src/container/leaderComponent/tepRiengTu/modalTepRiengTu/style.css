@@ -1,3 +1,11 @@
+.modal_title_tep_rieng {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+}
+
 tr.tb_heade_tep_rieng_tu {
   background: linear-gradient(270deg, #ff5400 0%, #f17f21 80.56%);
   border-radius: 8px 8px 0px 0px;

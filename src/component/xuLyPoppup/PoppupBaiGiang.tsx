@@ -1,6 +1,6 @@
 import React from "react";
 
-import play_Circle from "../../../../../../assets/img/play_Circle (1).png";
+import play_Circle from "../../assets/img/play_Circle (1).png";
 
 export default function PoppupBaiGiang() {
   return (

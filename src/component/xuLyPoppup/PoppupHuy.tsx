@@ -1,6 +1,7 @@
+import { Checkbox } from "@mui/material";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../../../../store/store";
+import { RootState } from "../../store/store";
 
 import "./style.css";
 
@@ -9,6 +10,7 @@ export default function PoppupHuy() {
   const currentUser = useSelector(
     (state: RootState) => state.authReduser.currentUser
   );
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
     <>
       <div
@@ -52,15 +54,22 @@ export default function PoppupHuy() {
                   onChange={(e: any) => settextArea(e.target.value)}
                 />
               </section>
+              <section className="custom_check_box_huy">
+                <Checkbox
+                  {...label}
+                  sx={{ "& .MuiSvgIcon-root": { fontSize: 30 } }}
+                />
+                Gửi thông báo cho người tạo
+              </section>
             </div>
             <div className="custom_btn_huy">
-              <button
-                type="button"
-                data-dismiss="modal"
-              >
+              <button type="button" data-dismiss="modal">
                 Hủy
               </button>
-              <button type="button" className={textArea ? "custom_active_btn_huy": ""}>
+              <button
+                type="button"
+                className={textArea ? "custom_active_btn_huy" : ""}
+              >
                 Lưu
               </button>
             </div>

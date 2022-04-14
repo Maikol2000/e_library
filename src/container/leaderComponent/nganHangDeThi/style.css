@@ -1,0 +1,25 @@
+.ngan_hang_de_thi {
+  margin-top: 2rem;
+}
+
+.title_ngan_hang_de_thi {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  color: var(--Orange-7);
+}
+
+.ngan_hang_de_thi_huy_phe_duyet {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.table_ngan_hang_de_thi {
+  width: 100%;
+  height: 400px;
+  background: #ffffff;
+  box-shadow: 4px 4px 25px 4px rgba(154, 202, 245, 0.25);
+  border-radius: 16px;
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
